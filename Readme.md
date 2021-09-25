@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Алексей Алексеев](https://up.htmlacademy.ru/htmlcss/32/user/83102).
-* Наставник: `Неизвестно`.
+* Наставник: [Виктор Рыбаков](https://htmlacademy.ru/profile/viktor-rybakov).
 
 ---
 
