@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="./css/styles.css">
     <title>HTML Academy: Седона</title>
   </head>
   <body>
@@ -19,7 +20,9 @@
           </li>
         </ul>
       </nav>
-      <img class="sedona-logo" src="./img/svg/sedona-logo.svg" width="138" height="70" alt="City of Sedona" />
+      <a>
+        <img class="sedona-logo" src="./img/svg/sedona-logo.svg" width="138" height="70" alt="City of Sedona" />
+      </a>
       <ul class="actions-list">
         <li class="action-item">
           <button type="button">
@@ -32,7 +35,7 @@
           </button>
         </li>
         <li class="action-item">
-          <button type="button">Хочу сюда!</button>
+          <button class="favorites-button" type="button">Хочу сюда!</button>
         </li>
       </ul>
     </header>
@@ -45,12 +48,14 @@
           Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!
         </p>
         <ul class="advantages-list">
-          <li class="advantage-item">
-            <h3>Настоящий городок</h3>
-            <b>— №1 —</b>
-            <p>
-              Седона — не аттракцион для туристов, там течёт своя жизнь
-            </p>
+          <li>
+            <div class="advantage-item advantage-item-dark">
+              <h3>Настоящий городок</h3>
+              <b>— №1 —</b>
+              <p>
+                Седона — не аттракцион для туристов, там течёт своя жизнь
+              </p>
+            </div>
             <img src="./img/sedona-city.jpg" width="800" height="384" alt="Вид на Седону"/>
             <ul class="recommendations-list">
               <li class="recommendation-item">
@@ -73,29 +78,31 @@
               </li>
             </ul>
           </li>
-          <li class="advantage-item">
-            <h3>Там есть мост дьявола</h3>
-            <b>— №2 —</b>
-            <p>
-              Да, по нему можно пройти! Если вы осмелитесь, разумеется
-            </p>
+          <li>
+            <div class="advantage-item advantage-item-dark">
+              <h3>Там есть мост дьявола</h3>
+              <b>— №2 —</b>
+              <p>
+                Да, по нему можно пройти! Если вы осмелитесь, разумеется
+              </p>
+            </div>
             <img src="./img/devils-bridge.jpg" width="800" height="384" alt="Мост дьявола"/>
           </li>
-          <li class="advantage-item">
+          <li class="advantage-item advantage-item-light">
             <h3>Небольшая площадь</h3>
             <b>— №3 —</b>
             <p>
               Все достопримечательности находятся очень близко
             </p>
           </li>
-          <li class="advantage-item">
+          <li class="advantage-item advantage-item-medium">
             <h3>Красивая дорога</h3>
             <b>— №4 —</b>
             <p>
               Ехать в Седону из Лас-Вегаса совсем не скучно!
             </p>
           </li>
-          <li class="advantage-item">
+          <li class="advantage-item advantage-item-light">
             <h3>Мало туристов</h3>
             <b>— №5 —</b>
             <p>
@@ -109,7 +116,7 @@
         <p>
           Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне
         </p>
-        <button type="button">ПОИСК ГОСТИНИЦЫ В седоне</button>
+        <button class="search-button" type="button">ПОИСК ГОСТИНИЦЫ В седоне</button>
       </section>
     </main>
     <footer class="page-footer">
@@ -120,8 +127,8 @@
         </p>
         <form class="subscription-form" method="POST" action="https://echo.htmlacademy.ru/">
           <label class="visually-hidden" for="email">E-Mail</label>
-          <input id="email" type="email" name="subcription-emai" />
-          <button type="submit">Подписаться</button>
+          <input id="email" type="email" name="subcription-emai" placeholder="Ваш e-mail" />
+          <button class="subscription-button" type="submit">Подписаться</button>
         </form>
       </section>
       <ul class="social-links">
