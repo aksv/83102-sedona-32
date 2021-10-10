@@ -1,0 +1,310 @@
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/ptsans-400.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/ptsans-700.woff2") format("woff2");
+  font-display: swap;
+}
+
+body {
+  font-family: "PT Sans", Verdana, sans-serif;
+  background-color: #E5E5E5;
+}
+
+.btn {
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+.btn-favorites, 
+.btn-search,
+.catalog-item-details {
+  background-color: #756257;
+}
+
+.btn-subscription,
+.btn-apply,
+.catalog-item-save,
+.load-more {
+  background-color: #83B3D3;
+}
+
+.navigation-item-link {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 26px;
+  text-align: left;
+  text-decoration: none;
+  color: #000000;
+}
+
+.btn-favorites {
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.advantages-important {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.advantages-reasons {
+  font-size: 22px;
+  line-height: 36px;
+  text-align: center;
+  color: #333333;
+}
+
+.advantage-item-header {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.advantage-item-number {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+  text-align: center;
+}
+
+.advantage-item-text {
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+}
+
+.advantage-item-dark {
+  color: #FFFFFF;
+  background-color: #83B3D3;
+}
+
+.advantage-item-medium {
+  background-color: rgba(131, 179, 211, 0.2);
+}
+
+.advantage-item-light {
+  background-color: rgba(131, 179, 211, 0.12);
+}
+
+.recommendation-item:nth-child(odd) {
+  background-color: rgba(131, 179, 211, 0.12);
+}
+
+.recommendation-item-header {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.recommendation-item-text {
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  color: #333333;
+}
+
+.search-header {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.search-text {
+  font-size: 22px;
+  line-height: 26px;
+  text-align: center;
+  color: #333333;
+}
+
+.btn-search {
+  font-size: 20px;
+  line-height: 36px;
+}
+
+.subscription {
+  width: 1200px;
+  min-height: 411px;
+  background-image: url("../img/canyon-background.jpg");
+  background-size: cover;
+}
+
+.subscription-header {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+  text-align: center;
+  color: #FFFFFF;
+  text-transform: uppercase;
+}
+
+.subscription-text {
+  font-size: 22px;
+  line-height: 26px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.subscription-input-email {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 26px;
+}
+
+.btn-subscription {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+.phone-link {
+  font-size: 40px;
+  line-height: 40px;
+  text-align: center;
+  text-decoration: none;
+  color: #000000;
+}
+
+.catalog-search {
+  width: 1200px;
+  min-height: 408px;
+  background-image: url('../img/catalog-background.jpg');
+  background-size: cover;
+  color: #FFFFFF;
+}
+
+.catalog-search-header {
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 78px;
+}
+
+.breadcrumbs-item {
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.search-filters-legend, .search-filters-price {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 26px;
+}
+
+.infrastructure-option-label, .classification-label {
+  font-size: 18px;
+  line-height: 23px;
+}
+
+.btn-apply {
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.btn-reset {
+  font-size: 18px;
+  line-height: 23px;
+  text-align: center;
+  color: #FFFFFF;
+  background: none;
+}
+
+.search-result-head {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 39px;
+  text-transform: uppercase;
+}
+
+.sort-by {
+  font-size: 18px;
+  line-height: 23px;
+  color: #333333;
+}
+
+.catalog-item-title {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 31px;
+}
+
+.catalog-item-type, .catalog-item-price {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 23px;
+  color: #333333;
+}
+
+.catalog-item-details, .catalog-item-save {
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.catalog-item-details {
+  text-decoration: none;
+}
+
+.catalog-item-rating {
+  font-size: 16px;
+  line-height: 21px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #333333;
+  background-color: #F2F2F2;
+}
+
+.load-more {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+.pagination-item-link {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 26px;
+  text-align: center;
+  text-decoration: none;
+  color: #FFFFFF;
+  background-color: #83B3D3;
+}
+
+.pagination-item-link-current {
+  color: #000000;
+  background-color: #F2F2F2;
+}
+
+.total-items-label, .total-items-select {
+  font-size: 18px;
+  line-height: 23px;
+  color: #333333;
+}
+
+.catalog-subscription {
+  background-image: none;
+  background-color: #FFFFFF;
+}
+
+.catalog-subscription .subscription-header {
+  color: #000000;
+}
+
+.catalog-subscription .subscription-text {
+  color: #333333;
+}
