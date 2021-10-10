@@ -16,6 +16,27 @@
 
 body {
   font-family: "PT Sans", Verdana, sans-serif;
+  background-color: #E5E5E5;
+}
+
+.btn {
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+.btn-favorites, 
+.btn-search,
+.catalog-item-details {
+  background-color: #756257;
+}
+
+.btn-subscription,
+.btn-apply,
+.catalog-item-save,
+.load-more {
+  background-color: #83B3D3;
 }
 
 .navigation-item-link {
@@ -27,14 +48,9 @@ body {
   color: #000000;
 }
 
-.favorites-button {
+.btn-favorites {
   font-size: 16px;
-  font-weight: 700;
   line-height: 21px;
-  text-align: center;
-  text-transform: uppercase;
-  color: #FFFFFF;
-  background-color: #756257;
 }
 
 .advantages-important {
@@ -42,6 +58,7 @@ body {
   font-weight: 700;
   line-height: 36px;
   text-align: center;
+  text-transform: uppercase;
 }
 
 .advantages-reasons {
@@ -56,6 +73,7 @@ body {
   font-weight: 700;
   line-height: 28px;
   text-align: center;
+  text-transform: uppercase;
 }
 
 .advantage-item-number {
@@ -93,6 +111,7 @@ body {
   font-weight: 700;
   line-height: 28px;
   text-align: center;
+  text-transform: uppercase;
 }
 
 .recommendation-item-text {
@@ -107,6 +126,7 @@ body {
   font-weight: 700;
   line-height: 36px;
   text-align: center;
+  text-transform: uppercase;
 }
 
 .search-text {
@@ -116,20 +136,16 @@ body {
   color: #333333;
 }
 
-.search-button {
+.btn-search {
   font-size: 20px;
-  font-weight: 700;
   line-height: 36px;
-  text-align: center;
-  text-transform: uppercase;
-  color: #FFFFFF;
-  background-color: #756257;
 }
 
 .subscription {
   width: 1200px;
-  height: 411px;
+  min-height: 411px;
   background-image: url("../img/canyon-background.jpg");
+  background-size: cover;
 }
 
 .subscription-header {
@@ -138,6 +154,7 @@ body {
   line-height: 36px;
   text-align: center;
   color: #FFFFFF;
+  text-transform: uppercase;
 }
 
 .subscription-text {
@@ -153,14 +170,9 @@ body {
   line-height: 26px;
 }
 
-.subscription-button {
+.btn-subscription {
   font-size: 20px;
-  font-weight: 700;
   line-height: 26px;
-  text-align: center;
-  text-transform: uppercase;
-  color: #FFFFFF;
-  background-color: #83B3D3;
 }
 
 .phone-link {
@@ -173,8 +185,9 @@ body {
 
 .catalog-search {
   width: 1200px;
-  height: 408px;
+  min-height: 408px;
   background-image: url('../img/catalog-background.jpg');
+  background-size: cover;
   color: #FFFFFF;
 }
 
@@ -200,17 +213,12 @@ body {
   line-height: 23px;
 }
 
-.button-apply {
+.btn-apply {
   font-size: 16px;
-  font-weight: 700;
   line-height: 21px;
-  text-align: center;
-  text-transform: uppercase;
-  color: #FFFFFF;
-  background-color: #83B3D3;
 }
 
-.button-reset {
+.btn-reset {
   font-size: 18px;
   line-height: 23px;
   text-align: center;
@@ -222,6 +230,7 @@ body {
   font-size: 30px;
   font-weight: 700;
   line-height: 39px;
+  text-transform: uppercase;
 }
 
 .sort-by {
@@ -245,24 +254,11 @@ body {
 
 .catalog-item-details, .catalog-item-save {
   font-size: 16px;
-  font-weight: 700;
   line-height: 21px;
-  text-align: center;
-  text-transform: uppercase;
-  color: #FFFFFF;
 }
 
 .catalog-item-details {
-  width: 151px;
-  height: 37px;
   text-decoration: none;
-  background-color: #756257;
-}
-
-.catalog-item-save {
-  width: 160px;
-  height: 37px;
-  background-color: #83B3D3;
 }
 
 .catalog-item-rating {
@@ -276,24 +272,8 @@ body {
 
 .load-more {
   font-size: 20px;
-  font-weight: 700;
   line-height: 26px;
-  text-align: center;
-  text-transform: uppercase;
-  color: #FFFFFF;
-  background-color: #83B3D3;
 }
-
-.pagination-item {
-  width: 55px;
-  height: 55px;
-  background-color: #83B3D3;
-}
-
-.pagination-item:first-child {
-  background-color: #F2F2F2;
-}
-
 
 .pagination-item-link {
   font-size: 20px;
@@ -302,10 +282,12 @@ body {
   text-align: center;
   text-decoration: none;
   color: #FFFFFF;
+  background-color: #83B3D3;
 }
 
 .pagination-item-link-current {
   color: #000000;
+  background-color: #F2F2F2;
 }
 
 .total-items-label, .total-items-select {
