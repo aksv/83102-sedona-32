@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="./css/styles.css">
-    <title>HTML Academy: Седона</title>
-  </head>
-  <body>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="./css/styles.css">
+  <title>HTML Academy: Седона</title>
+</head>
+
+<body>
+  <div class="main-container">
     <header class="page-header">
       <nav class="navigation">
         <ul class="navigation-list">
@@ -20,8 +23,8 @@
           </li>
         </ul>
       </nav>
-      <a>
-        <img class="sedona-logo" src="./img/svg/sedona-logo.svg" width="138" height="70" alt="City of Sedona" />
+      <a class="sedona-logo">
+        <img src="./img/svg/sedona-logo.svg" width="138" height="70" alt="City of Sedona" />
       </a>
       <ul class="actions-list">
         <li class="action-item">
@@ -48,7 +51,7 @@
           Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!
         </p>
         <ul class="advantages-list">
-          <li>
+          <li class="advantage-item-wide">
             <div class="advantage-item advantage-item-dark">
               <h3 class="advantage-item-header">Настоящий городок</h3>
               <b class="advantage-item-number">— №1 —</b>
@@ -56,7 +59,7 @@
                 Седона — не аттракцион для туристов, там течёт своя жизнь
               </p>
             </div>
-            <img src="./img/sedona-city.jpg" width="800" height="384" alt="Вид на Седону"/>
+            <img src="./img/sedona-city.jpg" width="800" height="384" alt="Вид на Седону" />
             <ul class="recommendations-list">
               <li class="recommendation-item">
                 <h4 class="recommendation-item-header">Жильё</h4>
@@ -78,7 +81,7 @@
               </li>
             </ul>
           </li>
-          <li>
+          <li class="advantage-item-wide advantage-item-wide-reversed">
             <div class="advantage-item advantage-item-dark">
               <h3 class="advantage-item-header">Там есть мост дьявола</h3>
               <b class="advantage-item-number">— №2 —</b>
@@ -86,7 +89,7 @@
                 Да, по нему можно пройти! Если вы осмелитесь, разумеется
               </p>
             </div>
-            <img src="./img/devils-bridge.jpg" width="800" height="384" alt="Мост дьявола"/>
+            <img src="./img/devils-bridge.jpg" width="800" height="384" alt="Мост дьявола" />
           </li>
           <li class="advantage-item advantage-item-light">
             <h3 class="advantage-item-header">Небольшая площадь</h3>
@@ -127,31 +130,36 @@
         </p>
         <form class="subscription-form" method="POST" action="https://echo.htmlacademy.ru/">
           <label class="visually-hidden" for="email">E-Mail</label>
-          <input class="subscription-input-email" id="email" type="email" name="subcription-emai" placeholder="Ваш e-mail" />
+          <input class="subscription-input-email" id="email" type="email" name="subcription-emai"
+            placeholder="Ваш e-mail" />
           <button class="btn btn-subscription" type="submit">Подписаться</button>
         </form>
       </section>
-      <ul class="social-links">
-        <li class="social-link-twitter">
-          <a href="#">
-            <span class="visually-hidden">Twitter</span>
-          </a>
-        </li>
-        <li class="social-link-facebook">
-          <a href="#">
-            <span class="visually-hidden">Facebook</span>
-          </a>
-        </li>
-        <li class="social-link-vk">
-          <a href="#">
-            <span class="visually-hidden">ВКонтакте</span>
-          </a>
-        </li>
-      </ul>
-      <a class="phone-link" href="tel:+78128121212">+7 (812) 812-12-12</a>
-      <a class="htmlacademy-link">
-        <span class="visually-hiden">HTML Academy</span>
-      </a>
+      <div class="contacts">
+        <ul class="social-links">
+          <li class="social-link-twitter">
+            <a href="#">
+              <span class="visually-hidden">Twitter</span>
+            </a>
+          </li>
+          <li class="social-link-facebook">
+            <a href="#">
+              <span class="visually-hidden">Facebook</span>
+            </a>
+          </li>
+          <li class="social-link-vk">
+            <a href="#">
+              <span class="visually-hidden">ВКонтакте</span>
+            </a>
+          </li>
+        </ul>
+        <a class="phone-link" href="tel:+78128121212">+7 (812) 812-12-12</a>
+        <a class="htmlacademy-link">
+          <span class="visually-hiden">HTML Academy</span>
+        </a>
+      </div>
     </footer>
-  </body>
+  </div>
+</body>
+
 </html>
