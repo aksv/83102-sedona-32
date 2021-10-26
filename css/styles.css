@@ -14,6 +14,18 @@
   font-display: swap;
 }
 
+:root {
+  --special-cold-light: #83B3D3;
+  --special-cold-light12: rgba(131, 179, 211, 0.12);
+  --special-cold-light20: rgba(131, 179, 211, 0.2);
+  --special-warm-light: #756257;
+  --basic-dark: #333333;
+  --basic-white: #FFFFFF;
+  --basic-black: #000000;
+  --basic-light: #F2F2F2;
+  --body-color: #E5E5E5;
+}
+
 html {
   height: 100%;
 }
@@ -22,7 +34,7 @@ body {
   min-height: 100%;
   margin: 0;
   font-family: "PT Sans", Verdana, sans-serif;
-  background-color: #E5E5E5;
+  background-color: var(--body-color);
 }
 
 /* Пока так уберу стилизацию co списков, потом поправлю */
@@ -35,14 +47,14 @@ ul, li {
 .main-container {
   width: 1200px;
   margin: 0 auto;
-  background-color: #FFFFFF;
+  background-color: var(--basic-white);
 }
 
 .btn {
   font-weight: 700;
   text-align: center;
   text-transform: uppercase;
-  color: #FFFFFF;
+  color: var(--basic-white);
 }
 
 .page-header {
@@ -50,8 +62,13 @@ ul, li {
   justify-content: space-around;
 }
 
+.navigation {
+  width: 531px;
+}
+
 .navigation-list {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .sedona-logo {
@@ -59,20 +76,22 @@ ul, li {
 }
 
 .actions-list {
+  width: 531px;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .btn-favorites, 
 .btn-search,
 .catalog-item-details {
-  background-color: #756257;
+  background-color: var(--special-warm-light);
 }
 
 .btn-subscription,
 .btn-apply,
 .catalog-item-save,
 .load-more {
-  background-color: #83B3D3;
+  background-color: var(--special-cold-light);
 }
 
 .navigation-item-link {
@@ -81,27 +100,12 @@ ul, li {
   line-height: 26px;
   text-align: left;
   text-decoration: none;
-  color: #000000;
+  color: var(--basic-black);
 }
 
 .btn-favorites {
   font-size: 16px;
   line-height: 21px;
-}
-
-.advantages-list {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.advantage-item-wide {
-  width: 1200px;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.advantage-item-wide-reversed {
-  flex-direction: row-reverse;
 }
 
 .advantages-important {
@@ -116,14 +120,44 @@ ul, li {
   font-size: 22px;
   line-height: 36px;
   text-align: center;
-  color: #333333;
+  color: var(--basic-dark);
+}
+
+.advantages-list {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .advantage-item {
+  display: flex;
+}
+
+.advantage-item-cl {
+  background-color: var(--special-cold-light);
+}
+
+.advantage-item-cl12 {
+  background-color: var(--special-cold-light12);
+}
+
+.advantage-item-cl20 {
+  background-color: var(--special-cold-light20);
+}
+
+.advantage-item-reversed {
+  flex-direction: row-reverse;
+}
+
+.advantage-item-content {
   width: 400px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  align-items: center;
+}
+
+.advantage-item-image {
+  width: 800px;
 }
 
 .advantage-item-header {
@@ -132,6 +166,7 @@ ul, li {
   line-height: 28px;
   text-align: center;
   text-transform: uppercase;
+  color: var(--basic-black);
 }
 
 .advantage-item-number {
@@ -139,25 +174,18 @@ ul, li {
   font-weight: 400;
   line-height: 21px;
   text-align: center;
+  color: var(--basic-dark);
 }
 
 .advantage-item-text {
   font-size: 18px;
   line-height: 21px;
   text-align: center;
+  color: var(--basic-dark);
 }
 
-.advantage-item-dark {
-  color: #FFFFFF;
-  background-color: #83B3D3;
-}
-
-.advantage-item-medium {
-  background-color: rgba(131, 179, 211, 0.2);
-}
-
-.advantage-item-light {
-  background-color: rgba(131, 179, 211, 0.12);
+.color-contrast {
+  color: var(--basic-white);
 }
 
 .recommendations-list {
@@ -169,7 +197,7 @@ ul, li {
 }
 
 .recommendation-item:nth-child(odd) {
-  background-color: rgba(131, 179, 211, 0.12);
+  background-color: var(--special-cold-light12);
 }
 
 .recommendation-item-header {
@@ -184,7 +212,7 @@ ul, li {
   font-size: 18px;
   line-height: 21px;
   text-align: center;
-  color: #333333;
+  color: var(--basic-dark);
 }
 
 .search {
@@ -206,7 +234,7 @@ ul, li {
   font-size: 22px;
   line-height: 26px;
   text-align: center;
-  color: #333333;
+  color: var(--basic-dark);
 }
 
 .btn-search {
@@ -230,7 +258,7 @@ ul, li {
   font-weight: 700;
   line-height: 36px;
   text-align: center;
-  color: #FFFFFF;
+  color: var(--basic-white);
   text-transform: uppercase;
 }
 
@@ -238,7 +266,7 @@ ul, li {
   font-size: 22px;
   line-height: 26px;
   text-align: center;
-  color: #FFFFFF;
+  color: var(--basic-white);
 }
 
 .subscription-input-email {
@@ -260,15 +288,23 @@ ul, li {
 }
 
 .social-links {
+  width: 240px;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .phone-link {
+  flex-grow: 1;
   font-size: 40px;
   line-height: 40px;
   text-align: center;
   text-decoration: none;
-  color: #000000;
+  color: var(--basic-black);
+}
+
+.htmlacademy-link {
+  width: 240px;
+  margin-left: auto;
 }
 
 .catalog-search {
@@ -276,7 +312,7 @@ ul, li {
   min-height: 408px;
   background-image: url('../img/catalog-background.jpg');
   background-size: cover;
-  color: #FFFFFF;
+  color: var(--basic-white);
 }
 
 .catalog-search-header {
@@ -310,7 +346,7 @@ ul, li {
   font-size: 18px;
   line-height: 23px;
   text-align: center;
-  color: #FFFFFF;
+  color: var(--basic-white);
   background: none;
 }
 
@@ -324,7 +360,7 @@ ul, li {
 .sort-by {
   font-size: 18px;
   line-height: 23px;
-  color: #333333;
+  color: var(--basic-dark);
 }
 
 .catalog-item-title {
@@ -337,7 +373,7 @@ ul, li {
   font-size: 18px;
   font-weight: 400;
   line-height: 23px;
-  color: #333333;
+  color: var(--basic-dark);
 }
 
 .catalog-item-details, .catalog-item-save {
@@ -354,8 +390,8 @@ ul, li {
   line-height: 21px;
   text-align: center;
   text-transform: uppercase;
-  color: #333333;
-  background-color: #F2F2F2;
+  color: var(--basic-dark);
+  background-color: var(--basic-light);
 }
 
 .load-more {
@@ -369,30 +405,30 @@ ul, li {
   line-height: 26px;
   text-align: center;
   text-decoration: none;
-  color: #FFFFFF;
-  background-color: #83B3D3;
+  color: var(--basic-white);
+  background-color: var(--special-cold-light);
 }
 
 .pagination-item-link-current {
-  color: #000000;
-  background-color: #F2F2F2;
+  color: var(--basic-black);
+  background-color: var(--basic-light);
 }
 
 .total-items-label, .total-items-select {
   font-size: 18px;
   line-height: 23px;
-  color: #333333;
+  color: var(--basic-dark);
 }
 
 .catalog-subscription {
   background-image: none;
-  background-color: #FFFFFF;
+  background-color: var(--basic-white);
 }
 
 .catalog-subscription .subscription-header {
-  color: #000000;
+  color: var(--basic-black);
 }
 
 .catalog-subscription .subscription-text {
-  color: #333333;
+  color: var(--basic-dark);
 }
