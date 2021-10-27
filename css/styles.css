@@ -38,7 +38,7 @@ body {
 }
 
 /* Пока так уберу стилизацию co списков, потом поправлю */
-ul, li {
+ul, ol, li {
   list-style-type: none;
   padding: 0;
   margin: 0;
@@ -48,6 +48,11 @@ ul, li {
   width: 1200px;
   margin: 0 auto;
   background-color: var(--basic-white);
+}
+
+.content-container {
+  width: 1056px;
+  margin: 0 auto;
 }
 
 .btn {
@@ -244,7 +249,6 @@ ul, li {
 }
 
 .subscription {
-  width: 1200px;
   min-height: 411px;
   display: flex;
   flex-direction: column;
@@ -321,9 +325,26 @@ ul, li {
   line-height: 78px;
 }
 
+.breadcrumbs {
+  display: flex;
+}
+
 .breadcrumbs-item {
   font-size: 16px;
   line-height: 21px;
+}
+
+.filter-form {
+  display: flex;
+  justify-content: space-between;
+}
+
+.infrastructure-options,
+.classification,
+.filter-price-container,
+.filter-buttons-container {
+  display: flex;
+  flex-direction: column;
 }
 
 .search-filters-legend, .search-filters-price {
@@ -350,6 +371,12 @@ ul, li {
   background: none;
 }
 
+.search-result-header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
 .search-result-head {
   font-size: 30px;
   font-weight: 700;
@@ -361,6 +388,22 @@ ul, li {
   font-size: 18px;
   line-height: 23px;
   color: var(--basic-dark);
+}
+
+.view-mode-options {
+  display: flex;
+}
+
+.catalog-item {
+  display: flex;
+}
+
+.catalog-item-image {
+  width: 180px;
+}
+
+.catalog-item-info {
+  flex-grow: 1;
 }
 
 .catalog-item-title {
@@ -386,6 +429,8 @@ ul, li {
 }
 
 .catalog-item-rating {
+  width: 160px;
+  margin-left: auto;
   font-size: 16px;
   line-height: 21px;
   text-align: center;
@@ -395,8 +440,22 @@ ul, li {
 }
 
 .load-more {
+  display: block;
+  width: 625px;
+  padding: 0;
+  border: 0;
+  margin: 0 auto;
   font-size: 20px;
   line-height: 26px;
+}
+
+.display-options {
+  display: flex;
+  justify-content: space-between;
+}
+
+.pagination {
+  display: flex;
 }
 
 .pagination-item-link {
