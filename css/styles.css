@@ -23,7 +23,23 @@
   --basic-white: #FFFFFF;
   --basic-black: #000000;
   --basic-light: #F2F2F2;
+  --basic-gray: #E6E6E6;
   --body-color: #E5E5E5;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.outline {
+  outline: solid 1px lightcoral;
 }
 
 html {
@@ -42,6 +58,11 @@ ul, ol, li {
   list-style-type: none;
   padding: 0;
   margin: 0;
+}
+
+button {
+  border: none;
+  background-color: white;
 }
 
 .main-container {
@@ -83,7 +104,9 @@ ul, ol, li {
 .actions-list {
   width: 531px;
   display: flex;
+  justify-content: flex-end;
   flex-wrap: wrap;
+  align-items: center;
 }
 
 .btn-favorites, 
@@ -99,7 +122,19 @@ ul, ol, li {
   background-color: var(--special-cold-light);
 }
 
+.navigation-item {
+  margin-right: 33px;
+}
+
+/* TODO: при переполнении из-за этого встык влезает 4-ый элемент прежде чем выпонить перенос */
+.navigation-item:nth-child(3n) {
+  margin-right: 0;
+}
+
 .navigation-item-link {
+  display: block;
+  padding-top: 20px;
+  padding-bottom: 20px;
   font-size: 20px;
   font-weight: 700;
   line-height: 26px;
@@ -108,12 +143,24 @@ ul, ol, li {
   color: var(--basic-black);
 }
 
+.action-item {
+  margin-left: 20px;
+}
+
+.action-item-search, .action-item-save {
+  width: 20px;
+  height: 20px;
+}
+
 .btn-favorites {
   font-size: 16px;
   line-height: 21px;
+  padding: 10px 30px;
 }
 
 .advantages-important {
+  width: 720px;
+  margin: 0 auto 23px auto;
   font-size: 30px;
   font-weight: 700;
   line-height: 36px;
@@ -122,6 +169,8 @@ ul, ol, li {
 }
 
 .advantages-reasons {
+  width: 720px;
+  margin: 0 auto 79px auto;
   font-size: 22px;
   line-height: 36px;
   text-align: center;
@@ -134,7 +183,15 @@ ul, ol, li {
 }
 
 .advantage-item {
+  min-height: 384px;
   display: flex;
+}
+
+element.style {
+  width: 250px;
+  min-height: 384px;
+  padding-left: 75px;
+  padding-right: 75px;
 }
 
 .advantage-item-cl {
@@ -154,7 +211,8 @@ ul, ol, li {
 }
 
 .advantage-item-content {
-  width: 400px;
+  width: 250px;
+  padding: 98px 75px 77px 75px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -166,6 +224,8 @@ ul, ol, li {
 }
 
 .advantage-item-header {
+  margin: 0;
+  margin-bottom: 25px;
   font-size: 24px;
   font-weight: 700;
   line-height: 28px;
@@ -175,6 +235,7 @@ ul, ol, li {
 }
 
 .advantage-item-number {
+  margin-bottom: 26px;
   font-size: 18px;
   font-weight: 400;
   line-height: 21px;
@@ -183,6 +244,7 @@ ul, ol, li {
 }
 
 .advantage-item-text {
+  margin: 0;
   font-size: 18px;
   line-height: 21px;
   text-align: center;
@@ -198,7 +260,9 @@ ul, ol, li {
 }
 
 .recommendation-item {
-  width: 400px;
+  width: 250px;
+  padding: 184px 75px 79px 75px;
+  min-height: 121px;
 }
 
 .recommendation-item:nth-child(odd) {
@@ -206,6 +270,8 @@ ul, ol, li {
 }
 
 .recommendation-item-header {
+  margin: 0;
+  margin-bottom: 20px;
   font-size: 24px;
   font-weight: 700;
   line-height: 28px;
@@ -214,6 +280,7 @@ ul, ol, li {
 }
 
 .recommendation-item-text {
+  margin: 0;
   font-size: 18px;
   line-height: 21px;
   text-align: center;
@@ -221,12 +288,16 @@ ul, ol, li {
 }
 
 .search {
+  padding-top: 91px;
+  padding-bottom: 91px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .search-header {
+  margin: 0;
+  margin-bottom: 15px;
   font-size: 30px;
   font-weight: 700;
   line-height: 36px;
@@ -236,6 +307,8 @@ ul, ol, li {
 
 .search-text {
   width: 575px;
+  margin: 0;
+  margin-bottom: 73px;
   font-size: 22px;
   line-height: 26px;
   text-align: center;
@@ -244,12 +317,15 @@ ul, ol, li {
 
 .btn-search {
   width: 575px;
+  padding: 13px 0 17px 0;
   font-size: 20px;
   line-height: 36px;
 }
 
 .subscription {
-  min-height: 411px;
+  min-height: 224px;
+  padding-top: 94px;
+  padding-bottom: 93px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -258,6 +334,8 @@ ul, ol, li {
 }
 
 .subscription-header {
+  margin: 0;
+  margin-bottom: 15px;
   font-size: 30px;
   font-weight: 700;
   line-height: 36px;
@@ -267,6 +345,8 @@ ul, ol, li {
 }
 
 .subscription-text {
+  margin: 0;
+  margin-bottom: 26px;
   font-size: 22px;
   line-height: 26px;
   text-align: center;
@@ -289,12 +369,20 @@ ul, ol, li {
 .contacts {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 30px;
 }
 
 .social-links {
   width: 240px;
   display: flex;
   flex-wrap: wrap;
+}
+
+.social-link {
+  width: 20px;
+  height: 20px;
 }
 
 .phone-link {
@@ -320,6 +408,7 @@ ul, ol, li {
 }
 
 .catalog-search-header {
+  margin: 0;
   font-size: 60px;
   font-weight: 700;
   line-height: 78px;
@@ -372,12 +461,15 @@ ul, ol, li {
 }
 
 .search-result-header {
+  padding-top: 50px;
+  padding-bottom: 42px;
   display: flex;
-  justify-content: space-around;
   align-items: center;
 }
 
 .search-result-head {
+  margin: 0;
+  margin-right: 192px;
   font-size: 30px;
   font-weight: 700;
   line-height: 39px;
@@ -391,22 +483,50 @@ ul, ol, li {
 }
 
 .view-mode-options {
+  margin-left: auto;
   display: flex;
+}
+
+.view-mode-item {
+  width: 48px;
+  height: 48px;
+}
+
+.catalog-list-item {
+  border-top: 1px solid var(--basic-gray);
+}
+
+.catalog-list-item:last-child {
+  border-bottom: 1px solid var(--basic-gray);
+  margin-bottom: 31px;
 }
 
 .catalog-item {
   display: flex;
+  padding-top: 28px;
+  padding-bottom: 30px;
 }
 
 .catalog-item-image {
   width: 180px;
+  margin-right: 37px;
+
 }
 
 .catalog-item-info {
   flex-grow: 1;
+  display: grid;
+  grid-template-columns: 168px 1fr;
+  grid-template-rows: 31px 1fr 37px;
+  grid-template-areas:
+    "head head"
+    "type price"
+    "details save";
 }
 
 .catalog-item-title {
+  margin: 0;
+  grid-area: head;
   font-size: 24px;
   font-weight: 700;
   line-height: 31px;
@@ -419,12 +539,31 @@ ul, ol, li {
   color: var(--basic-dark);
 }
 
+.catalog-item-type {
+  grid-area: type;
+}
+
+.catalog-item-price {
+  grid-area: price;
+}
+
 .catalog-item-details, .catalog-item-save {
+  width: 160px;
+  min-height: 37px;
   font-size: 16px;
   line-height: 21px;
 }
 
+.catalog-item-save {
+  grid-area: save;
+}
+
 .catalog-item-details {
+  grid-area: details;
+  display: block;
+  text-align: center;
+  /* TODO: Выглядит как хак: что бы выравнять текст ссылки по центру */
+  line-height: 37px;
   text-decoration: none;
 }
 
@@ -442,26 +581,40 @@ ul, ol, li {
 .load-more {
   display: block;
   width: 625px;
+  min-height: 55px;
   padding: 0;
   border: 0;
-  margin: 0 auto;
+  margin: 0 auto 30px auto;
   font-size: 20px;
   line-height: 26px;
 }
 
 .display-options {
+  padding-top: 31px;
   display: flex;
   justify-content: space-between;
+  border-top: 1px solid var(--basic-gray);
 }
 
 .pagination {
   display: flex;
 }
 
+.pagination-item {
+  margin-right: 8px;
+}
+
+.pagination-item:last-child {
+  margin: 0;
+}
+
 .pagination-item-link {
+  display: block;
+  width: 55px;
+  height: 55px;
   font-size: 20px;
   font-weight: 700;
-  line-height: 26px;
+  line-height: 55px;
   text-align: center;
   text-decoration: none;
   color: var(--basic-white);
