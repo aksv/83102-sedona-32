@@ -42,6 +42,15 @@
   outline: solid 1px lightcoral;
 }
 
+.bg-basic-light {
+  background-color: var(--basic-light);
+}
+
+.content-container {
+  padding-left: 72px;
+  padding-right: 72px;
+}
+
 html {
   height: 100%;
 }
@@ -53,7 +62,6 @@ body {
   background-color: var(--body-color);
 }
 
-/* Пока так уберу стилизацию co списков, потом поправлю */
 ul, ol, li {
   list-style-type: none;
   padding: 0;
@@ -69,11 +77,6 @@ button {
   width: 1200px;
   margin: 0 auto;
   background-color: var(--basic-white);
-}
-
-.content-container {
-  width: 1056px;
-  margin: 0 auto;
 }
 
 .btn {
@@ -95,6 +98,7 @@ button {
 .navigation-list {
   display: flex;
   flex-wrap: wrap;
+  gap: 33px;
 }
 
 .sedona-logo {
@@ -122,15 +126,6 @@ button {
   background-color: var(--special-cold-light);
 }
 
-.navigation-item {
-  margin-right: 33px;
-}
-
-/* TODO: при переполнении из-за этого встык влезает 4-ый элемент прежде чем выпонить перенос */
-.navigation-item:nth-child(3n) {
-  margin-right: 0;
-}
-
 .navigation-item-link {
   display: block;
   padding-top: 20px;
@@ -156,6 +151,28 @@ button {
   font-size: 16px;
   line-height: 21px;
   padding: 10px 30px;
+}
+
+.sedona-welcome {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 434px;
+  padding-top: 50px;
+  background-image: url('../img/grand-canyon.jpg');
+  background-repeat: no-repeat;
+}
+
+.sedona-welcome-divider {
+  width: 100%;
+  height: 51px;
+  background-image: url('../img/svg/divider.svg');
+  margin-top: auto;
+}
+
+.advantages {
+  padding-top: 63px;
 }
 
 .advantages-important {
@@ -353,31 +370,44 @@ element.style {
   color: var(--basic-white);
 }
 
+.subscription-form {
+  display: flex;
+  width: 800px;
+}
+
 .subscription-input-email {
-  width: 600px;
+  display: block;
+  width: 578px;
   margin: 0;
+  padding: 0;
+  padding-left: 22px;
   font-size: 18px;
   font-weight: 400;
   line-height: 26px;
+  border: 0;
 }
 
 .btn-subscription {
+  display: block;
+  width: 200px;
+  height: 60px;
+  padding: 0;
   font-size: 20px;
   line-height: 26px;
 }
 
 .contacts {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   padding-top: 40px;
   padding-bottom: 30px;
 }
 
 .social-links {
-  width: 240px;
+  width: 120px;
   display: flex;
   flex-wrap: wrap;
+  gap: 30px;
 }
 
 .social-link {
@@ -395,7 +425,8 @@ element.style {
 }
 
 .htmlacademy-link {
-  width: 240px;
+  width: 115px;
+  height: 32px;
   margin-left: auto;
 }
 
@@ -567,11 +598,21 @@ element.style {
   text-decoration: none;
 }
 
+.score-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.catalog-item-stars {
+  height: 17px;
+}
+
 .catalog-item-rating {
   width: 160px;
-  margin-left: auto;
+  height: 37px;
   font-size: 16px;
-  line-height: 21px;
+  line-height: 37px;
   text-align: center;
   text-transform: uppercase;
   color: var(--basic-dark);
