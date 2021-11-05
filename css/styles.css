@@ -548,7 +548,7 @@ element.style {
   flex-grow: 1;
   display: grid;
   grid-template-columns: 168px 1fr;
-  grid-template-rows: 31px 1fr 37px;
+  grid-template-rows: min-content 1fr 37px;
   grid-template-areas:
     "head head"
     "type price"
@@ -634,6 +634,7 @@ element.style {
   padding-top: 31px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   border-top: 1px solid var(--basic-gray);
 }
 
