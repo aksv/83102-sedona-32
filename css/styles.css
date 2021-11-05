@@ -154,21 +154,11 @@ button {
 }
 
 .sedona-welcome {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   width: 100%;
-  height: 434px;
-  padding-top: 50px;
-  background-image: url('../img/grand-canyon.jpg');
-  background-repeat: no-repeat;
-}
-
-.sedona-welcome-divider {
-  width: 100%;
-  height: 51px;
-  background-image: url('../img/svg/divider.svg');
-  margin-top: auto;
+  height: 485px;
+  background-image: url('../img/svg/welcome.svg'), url('../img/svg/divider.svg'), url('../img/grand-canyon.jpg');
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position: center, center bottom;
 }
 
 .advantages {
@@ -200,15 +190,9 @@ button {
 }
 
 .advantage-item {
-  min-height: 384px;
+  height: 100%;
   display: flex;
-}
-
-element.style {
-  width: 250px;
-  min-height: 384px;
-  padding-left: 75px;
-  padding-right: 75px;
+  flex-wrap: wrap;
 }
 
 .advantage-item-cl {
@@ -232,7 +216,6 @@ element.style {
   padding: 98px 75px 77px 75px;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
   align-items: center;
 }
 
@@ -241,6 +224,7 @@ element.style {
 }
 
 .advantage-item-header {
+  width: 171px;
   margin: 0;
   margin-bottom: 25px;
   font-size: 24px;
@@ -261,6 +245,7 @@ element.style {
 }
 
 .advantage-item-text {
+  width: 230px;
   margin: 0;
   font-size: 18px;
   line-height: 21px;
@@ -279,7 +264,6 @@ element.style {
 .recommendation-item {
   width: 250px;
   padding: 184px 75px 79px 75px;
-  min-height: 121px;
 }
 
 .recommendation-item:nth-child(odd) {
