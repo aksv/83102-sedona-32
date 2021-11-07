@@ -13,7 +13,7 @@
       <nav class="navigation">
         <ul class="navigation-list">
           <li class="navigation-item">
-            <a class="navigation-item-link">Главная</a>
+            <a href="#" class="navigation-item-link navigation-item-link-current">Главная</a>
           </li>
           <li class="navigation-item">
             <a class="navigation-item-link" href="#">О Седоне</a>
@@ -28,17 +28,33 @@
       </a>
       <ul class="actions-list">
         <li class="action-item">
-          <button class="outline action-item-search" type="button">
+          <a href="#" class="action-item-link action-item-search">
+            <svg class="action-item-icon" width="18" height="18" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#a)">
+                <path
+                  d="m18 16.5-3.7-3.7A8 8 0 0 0 8-.1C3.6-.1 0 3.6 0 8a8 8 0 0 0 12.9 6.3l3.7 3.7 1.4-1.5ZM8 14a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6Z" />
+              </g>
+              <defs>
+                <clipPath id="a">
+                  <path fill="#fff" d="M0 0h18v18H0z" />
+                </clipPath>
+              </defs>
+            </svg>
             <span class="visually-hidden">Поиск</span>
-          </button>
+          </a>
         </li>
         <li class="action-item">
-          <button class="outline action-item-save" type="button">
+          <a href="#" class="action-item-link action-item-save">
+            <span class="favorites-count"><span>12</span></span>
+            <svg class="action-item-icon" width="18" height="17" viewBox="0 0 18 17" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M8.9 17a1 1 0 0 1-.8-.4l-7-7.9A5.4 5.4 0 0 1 5.5 0C6.8 0 8 .5 9 1.3a5.5 5.5 0 0 1 9 4.1c0 1.3-.5 2.5-1.3 3.4l-7 7.9c-.2.2-.4.3-.8.3Zm-6-9.5L9 14.4l6.2-7c.5-.5.7-1.2.7-2 0-1.8-1.5-3.3-3.3-3.3-1 0-2 .5-2.7 1.3-.3.3-.6.4-.9.4-.3 0-.6-.2-.8-.4a3.7 3.7 0 0 0-2.7-1.3 3.3 3.3 0 0 0-3.3 3.3c-.1.9.3 1.6.7 2.1-.1 0-.1 0 0 0Z" />
+            </svg>
             <span class="visually-hidden">Добавить в избранное</span>
-          </button>
+          </a>
         </li>
         <li class="action-item">
-          <button class="btn btn-favorites" type="button">Хочу сюда!</button>
+          <button class="btn btn-favorites btn-interactive-dark" type="button">Хочу сюда!</button>
         </li>
       </ul>
     </header>
@@ -65,19 +81,19 @@
               <img class="advantage-item-image" src="./img/sedona-city.jpg" width="800" height="384"
                 alt="Вид на Седону" />
               <ul class="recommendations-list">
-                <li class="recommendation-item">
+                <li class="recommendation-item recommendation-item-hotels">
                   <h4 class="recommendation-item-header">Жильё</h4>
                   <p class="recommendation-item-text">
                     Рекомендуем пожить в настоящем мотеле, всё как в кино!
                   </p>
                 </li>
-                <li class="recommendation-item">
+                <li class="recommendation-item recommendation-item-food">
                   <h4 class="recommendation-item-header">Еда</h4>
                   <p class="recommendation-item-text">
                     Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!
                   </p>
                 </li>
-                <li class="recommendation-item">
+                <li class="recommendation-item recommendation-item-souvenirs">
                   <h4 class="recommendation-item-header">Сувениры</h4>
                   <p class="recommendation-item-text">
                     Не только китайского, но и настоящего местного производства!
@@ -139,7 +155,7 @@
         <p class="search-text">
           Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне
         </p>
-        <button class="btn btn-search" type="button">ПОИСК ГОСТИНИЦЫ В седоне</button>
+        <button class="btn btn-search btn-interactive-dark" type="button">ПОИСК ГОСТИНИЦЫ В седоне</button>
       </section>
     </main>
     <footer class="page-footer">
@@ -152,29 +168,31 @@
           <label class="visually-hidden" for="email">E-Mail</label>
           <input class="subscription-input-email" id="email" type="email" name="subcription-emai"
             placeholder="Ваш e-mail" />
-          <button class="btn btn-subscription" type="submit">Подписаться</button>
+          <button class="btn btn-subscription btn-interactive-light" type="submit">Подписаться</button>
         </form>
       </section>
       <div class="contacts content-container">
         <ul class="social-links">
-          <li class="social-link outline social-link-twitter">
-            <a href="#">
+          <li>
+            <a class="social-link social-link-twitter" href="#">
               <span class="visually-hidden">Twitter</span>
             </a>
           </li>
-          <li class="social-link outline social-link-facebook">
-            <a href="#">
+          <li>
+            <a href="#" class="social-link social-link-facebook">
               <span class="visually-hidden">Facebook</span>
             </a>
           </li>
-          <li class=" social-link outline social-link-vk">
-            <a href="#">
+          <li>
+            <a href="#" class="social-link social-link-youtube">
               <span class="visually-hidden">ВКонтакте</span>
             </a>
           </li>
         </ul>
-        <a class="phone-link" href="tel:+78128121212">+7 (812) 812-12-12</a>
-        <a class="htmlacademy-link outline">
+        <div class="phone-link-container">
+          <a class="phone-link" href="tel:+78128121212">+7 (812) 812-12-12</a>
+        </div>
+        <a href="https://htmlacademy.ru/" class="htmlacademy-link">
           <span class="visually-hidden">HTML Academy</span>
         </a>
       </div>
