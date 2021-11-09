@@ -15,21 +15,21 @@
 }
 
 :root {
-  --special-cold-light: #83B3D3;
-  --special-cold-dark: #68A2CA;
+  --special-cold-light: #83b3d3;
+  --special-cold-dark: #68a2ca;
   --special-cold-light12: rgba(131, 179, 211, 0.12);
   --special-cold-light20: rgba(131, 179, 211, 0.2);
   --special-warm-light: #756257;
   --special-warm-dark: #615048;
-  --special-neutral-light: #7DB550;
+  --special-neutral-light: #7db550;
   --basic-dark: #333333;
-  --basic-white: #FFFFFF;
+  --basic-white: #ffffff;
   --basic-black: #000000;
-  --basic-light: #F2F2F2;
-  --basic-gray: #E6E6E6;
-  --body-color: #E5E5E5;
+  --basic-light: #f2f2f2;
+  --basic-gray: #e6e6e6;
+  --body-color: #e5e5e5;
   --active-white: rgba(255, 255, 255, 0.3);
-  --status-error: #FF5757;
+  --status-error: #ff5757;
 }
 
 .visually-hidden {
@@ -41,10 +41,6 @@
   border: 0;
   clip: rect(0 0 0 0);
   overflow: hidden;
-}
-
-.outline {
-  outline: solid 1px lightcoral;
 }
 
 .bg-basic-light {
@@ -68,6 +64,12 @@ body {
 }
 
 ul, ol, li {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.list, .list li {
   list-style-type: none;
   padding: 0;
   margin: 0;
@@ -143,7 +145,7 @@ button {
   line-height: 26px;
   text-decoration: none;
   color: var(--basic-black);
-  border: 3px solid var(--basic-white);
+  border: 3px solid transparent;
 }
 
 .navigation-item-link-current::before {
@@ -160,14 +162,13 @@ button {
   color: var(--special-warm-light);
 }
 
-.navigation-item-link:focus {
+.navigation-item-link:focus-visible {
   outline: none;
   border: 3px solid var(--special-cold-light);
   border-radius: 10px;
 }
 
 .navigation-item-link:active {
-  border-color: var(--basic-white);
   opacity: 0.3;
 }
 
@@ -181,34 +182,21 @@ button {
   width: 18px;
   height: 18px;
   padding: 10px;
-  border: 3px solid var(--basic-white);
-}
-
-.action-item-icon {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: auto;
+  border: 3px solid transparent;
 }
 
 .action-item-link:hover .action-item-icon {
   fill: var(--special-warm-light);
 }
 
-.action-item-link:focus {
+.action-item-link:focus-visible {
   outline: none;
   border: 3px solid var(--special-cold-light);
   border-radius: 10px;
 }
 
-.action-item-link:focus .action-item-icon {
+.action-item-link:focus-visible .action-item-icon {
   fill: var(--special-warm-light);
-}
-
-.action-item-link:active {
-  border-color: var(--basic-white);
 }
 
 .action-item-link:active .action-item-icon {
@@ -220,7 +208,7 @@ button {
   position: absolute;
   z-index: 1;
   top: 1px;
-  left: 23px;
+  right: -3px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -256,7 +244,7 @@ button {
   border-color: var(--special-warm-dark);
 }
 
-.btn-interactive-dark:focus {
+.btn-interactive-dark:focus-visible {
   outline: none;
   background-color: var(--special-warm-dark);
   border-color: var(--special-cold-light);
@@ -264,7 +252,6 @@ button {
 
 .btn-interactive-dark:active {
   background-color: var(--special-warm-dark);
-  border-color: var(--special-warm-dark);
   color: var(--active-white);
 }
 
@@ -507,7 +494,7 @@ button {
   border-color: var(--basic-gray);
 }
 
-.subscription-input-email:focus {
+.subscription-input-email:focus-visible {
   outline: none;
   background-color: var(--basic-gray);
   border-color: var(--special-cold-light);
@@ -545,7 +532,7 @@ button {
   border-color: var(--special-cold-dark);
 }
 
-.btn-interactive-light:focus {
+.btn-interactive-light:focus-visible {
   outline: none;
   background-color: var(--special-cold-dark);
   border-color: var(--special-warm-light);
@@ -553,7 +540,6 @@ button {
 
 .btn-interactive-light:active {
   background-color: var(--special-cold-dark);
-  border-color: var(--special-cold-dark);
   color: var(--active-white);
 }
 
@@ -572,48 +558,33 @@ button {
 }
 
 .social-link {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 40px;
   height: 40px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: 18px 15px;
-  border: 3px solid var(--basic-white);
+  border: 3px solid transparent;
   border-radius: 10px;
   outline: none;
 }
 
-.social-link:focus {
+.social-icon {
+  fill: var(--special-cold-light);
+}
+
+.social-link:focus-visible {
   border: 3px solid var(--special-cold-light);
 }
 
-.social-link-twitter {
-  background-image: url('../img/svg/social-twitter.svg');
-}
-
-.social-link-twitter:hover, .social-link-twitter:focus {
-  background-image: url('../img/svg/social-twitter-dark.svg');
-}
-
-.social-link-facebook {
-  background-image: url('../img/svg/social-facebook.svg');
-}
-
-.social-link-facebook:hover, .social-link-facebook:focus {
-  background-image: url('../img/svg/social-facebook-dark.svg');
-}
-
-.social-link-youtube {
-  background-image: url('../img/svg/social-youtube.svg');
-}
-
-.social-link-youtube:hover, .social-link-youtube:focus {
-  background-image: url('../img/svg/social-youtube-dark.svg');
+.social-link:hover .social-icon, .social-link:focus-visible .social-icon {
+  fill: var(--special-cold-dark);
 }
 
 .social-link:active {
   opacity: 0.3;
-  border: 3px solid var(--basic-white);
 }
 
 .phone-link-container {
@@ -631,7 +602,7 @@ button {
   text-decoration: none;
   color: var(--basic-black);
   outline: none;
-  border: 3px solid var(--basic-white);
+  border: 3px solid transparent;
   border-radius: 10px;
 }
 
@@ -639,14 +610,13 @@ button {
   color: var(--special-warm-light);
 }
 
-.phone-link:focus {
+.phone-link:focus-visible {
   color: var(--special-warm-light);
   border-color: var(--special-cold-light);
 }
 
 .phone-link:active {
   opacity: 0.3;
-  border-color: var(--basic-white);
 }
 
 .htmlacademy-link {
@@ -657,7 +627,7 @@ button {
   background-position: center;
   background-size: 115px 34px;
   background-image: url('../img/svg/logo-htmlacademy.svg');
-  border: 3px solid var(--basic-white);
+  border: 3px solid transparent;
   border-radius: 10px;
   outline: none;
 }
@@ -666,13 +636,12 @@ button {
   background-image: url('../img/svg/logo-htmlacademy-focus.svg');
 }
 
-.htmlacademy-link:focus {
+.htmlacademy-link:focus-visible {
   border-color: var(--special-cold-light);
 }
 
 .htmlacademy-link:active {
   opacity: 0.3;
-  border-color: var(--basic-white)
 }
 
 .catalog-search {
