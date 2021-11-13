@@ -614,10 +614,18 @@ button {
   opacity: 0.3;
 }
 
-.htmlacademy-link {
+.htmlacademy-link-container {
   width: 252px;
-  height: 70px;
   margin-left: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.htmlacademy-link {
+  width: 115px;
+  height: 33px;
+  padding: 18px 22px 18px 22px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: 115px 34px;
