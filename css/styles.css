@@ -30,6 +30,7 @@
   --basic-gray: #e6e6e6;
   --body-color: #e5e5e5;
   --active-white: rgba(255, 255, 255, 0.3);
+  --hover-white: rgba(255, 255, 255, 0.6);
   --status-error: #ff5757;
 }
 
@@ -167,7 +168,6 @@ button {
 }
 
 .btn-subscription,
-.btn-apply,
 .catalog-item-save,
 .load-more {
   background-color: var(--special-cold-light);
@@ -681,18 +681,19 @@ button {
   background-size: 14px 14px;
   background-repeat: no-repeat;
   background-position: center;
-  outline: none;
+  border-radius: 4px;
+  /* outline: none; */
 }
 
 .breadcrumbs-link {
   padding: 3px;
-  border: 3px solid transparent;
+  /* border: 3px solid transparent; */
   border-radius: 4px;
   font-size: 16px;
   line-height: 21px;
   text-decoration: none;
   color: var(--basic-white);
-  outline: none;
+  /* outline: none; */
 }
 
 .breadcrumbs-home-link:hover, .breadcrumbs-link:hover {
@@ -700,7 +701,7 @@ button {
 }
 
 .breadcrumbs-home-link:focus-visible, .breadcrumbs-link:focus-visible {
-  border-color: var(--special-cold-light);
+  outline: 3px solid var(--special-cold-light);
 }
 
 .breadcrumbs-home-link:active, .breadcrumbs-link:active {
@@ -758,6 +759,49 @@ button {
   line-height: 26px;
 }
 
+.control {
+  display: flex;
+  gap: 19px;
+}
+.control:not(:last-child) {
+  margin-bottom: 16px;
+}
+.control:hover .control-mark {
+  opacity: 0.6;
+}
+
+.control-input:focus-visible + .control-mark {
+  outline: 3px solid var(--special-cold-light);
+  opacity: 0.6;
+}
+.control:active .control-mark {
+  opacity: 0.3;
+}
+.control-mark {
+  width: 20px;
+  height: 20px;
+  background-color: var(--basic-white);
+  border-radius: 4px;
+}
+.control-input[type="checkbox"]:checked + .control-mark {
+  background-image: url('../img/svg/control-checkbox.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.control-input[type="radio"] + .control-mark {
+  border-radius: 50%;
+}
+
+.control-input[type="radio"]:checked + .control-mark {
+  background-image: url('../img/svg/control-radio.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.control-text {
+  font-size: 18px;
+  line-height: 23px;
+}
+
 .option-label {
   margin-bottom: 13px;
   font-size: 18px;
@@ -789,55 +833,186 @@ button {
 .filter-grid {
   margin-left: auto;
   display: grid;
-  grid-template-columns: 142px 223px 1fr;
-  grid-template-rows: 60px 48px 48px;
+  grid-template-columns: 287px 160px;
+  grid-template-rows: min-content 48px 1fr;
+  column-gap: 81px;
 }
 
 .search-filters-price {
   grid-column: 1 / -1;
-  grid-row: 1 / 2;
+  grid-row: 1;
+  margin-bottom: 31px;
+}
+
+.range {
+  width: 287px;
+  grid-column: 1;
+  grid-row: 2 / -1;
+  display: flex;
+  flex-direction: column;
+}
+
+.range-wrapper-inputs {
+  position: relative;
+  display: flex;
+  margin-bottom: 32px;
+}
+
+.range-scale {
+  position: relative;
+  width: 290px;
+  height: 4px;
+  background-color: var(--basic-white);
+}
+
+.range-scale-pin {
+  position: absolute;
+  top: -7px;
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  background-color: var(--basic-white);
+  cursor: pointer;
+}
+
+.range-scale-pin-left {
+  left: 0px
+}
+
+.range-scale-pin-right {
+  right: 51px;
+}
+
+.range-scale-pin:focus-visible {
+  outline: 3px solid var(--special-cold-light);
+  outline-offset: -3px;
+}
+
+.range-scale-pin:active {
+  outline: 2px solid var(--special-cold-light);
+  outline-offset: -2px;
+}
+
+.price-help {
+  position: absolute;
+  width: 17px;
+  height: 23px;
+  font-size: 18px;
+  line-height: 23px;
+  color: var(--basic-white);
+  opacity: 0.3;
+}
+
+.price-from {
+  top: 25%;
+  left: 40%;
+}
+
+.price-to {
+  top: 25%;
+  right: 5%;
 }
 
 .price-min, .price-max {
+  width: 145px;
   border: 2px solid #FFFFFF;
+  padding: 14px;
   box-sizing: border-box;
-  border-radius: 4px;
   background: none;
+  font: inherit;  
+  font-size: 18px;
+  line-height: 23px;
+  color: var(--basic-white);
+  caret-color: var(--basic-white);
+}
+
+.number-input::-webkit-inner-spin-button, 
+.number-input::-webkit-outer-spin-button {
+  opacity: 0;
+}
+
+.number-input:hover {
+  border-color: var(--hover-white);
+}
+
+.number-input:focus-visible {
+  outline: 3px solid var(--special-cold-light);
+  outline-offset: -3px;
+}
+
+.number-input:active {
+  background-color: var(--basic-white);
 }
 
 .price-min {
-  grid-column: 1;
-  grid-row: 2;
+  border-radius: 4px 0 0 4px;
+  outline: none;
 }
 
 .price-max {
-  grid-column: 2;
-  grid-row: 2;
   margin-right: 81px;
+  border-left: none;
+  border-radius: 0 4px 4px 0;
+  outline: none;
 }
 
 .btn-apply, .btn-reset {
-  width: 160px;
-  height: 48px;
   cursor: pointer;
 }
 
 .btn-apply {
+  width: 160px;
+  height: 48px;
   border-radius: 4px;
-  grid-column: 3;
+  grid-column: 2;
   grid-row: 2;
   font-size: 16px;
   line-height: 21px;
+  background-color: var(--special-cold-light);
 }
 
+.btn-apply:hover {
+  background-color: var(--special-cold-dark);
+}
+
+.btn-apply:focus-visible {
+  background-color: var(--special-cold-dark);
+  outline: 3px solid var(--basic-white);
+  outline-offset: -3px;
+}
+
+.btn-apply:active {
+  background-color: var(--special-cold-dark);
+  color: var(--active-white);
+}
+
+
 .btn-reset {
-  grid-column: 3;
+  width: 100px;
+  height: 32px;
+  margin: 25px auto;
+  grid-column: 2;
   grid-row: 3;
   font-size: 18px;
   line-height: 23px;
   text-align: center;
   color: var(--basic-white);
   background: none;
+  border-radius: 4px;
+}
+
+.btn-reset:hover {
+  opacity: 0.6;
+}
+
+.btn-reset:focus-visible {
+  outline: 3px solid var(--special-cold-light);
+  outline-offset: -3px;
+}
+
+.btn-reset:active {
+  outline: none;
+  opacity: 0.3;
 }
 
 .search-result-header {
@@ -857,6 +1032,7 @@ button {
 }
 
 .sort-by {
+  position: relative;
   display: block;
   width: 249px;
   min-height: 48px;
@@ -864,6 +1040,13 @@ button {
   font-size: 18px;
   line-height: 23px;
   color: var(--basic-dark);
+}
+
+.with-dropdown {
+  background-image: url('../img/svg/dropdown.svg');
+  background-repeat: no-repeat;
+  background-size: 12px 7px;
+  background-position: calc(100% - 20px) 50%;
 }
 
 .sort-by, .total-items-select {
@@ -1150,12 +1333,17 @@ button {
 
 .total-items-form {
   display: flex;
+  align-items: center;
 }
 
 .total-items-label, .total-items-select {
   font-size: 18px;
   line-height: 23px;
   color: var(--basic-dark);
+}
+
+.total-items-label {
+  margin-right: 51px;
 }
 
 .total-items-select {

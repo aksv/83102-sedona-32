@@ -79,39 +79,61 @@
             <form class="filter-form" method="POST" action="https://echo.htmlacademy.ru/">
               <fieldset class="filter-options infrastructure-options">
                 <legend class="search-filters-legend">Инфраструктура:</legend>
-                <label class="infrastructure-option-label option-label" for="pool">
-                  <input id="pool" class="infrastructure-option" type="checkbox" name="pool" />
-                  <span class="option-label-text">Бассейн</span>
+                <label class="control" for="pool">
+                  <input id="pool" class="control-input visually-hidden" type="checkbox" name="pool" />
+                  <span class="control-mark"></span>
+                  <span class="control-text">Бассейн</span>
                 </label>
-                <label class="infrastructure-option-label option-label" for="parking">
-                  <input id="parking" class="infrastructure-option" type="checkbox" name="parking" />
-                  <span class="option-label-text">Парковка</span>
+                <label class="control" for="parking">
+                  <input id="parking" class="control-input visually-hidden" type="checkbox" name="parking" />
+                  <span class="control-mark"></span>
+                  <span class="control-text">Парковка</span>
                 </label>
-                <label class="infrastructure-option-label option-label" for="wifi">
-                  <input id="wifi" class="infrastructure-option" type="checkbox" name="wifi" />
-                  <span class="option-label-text">Wi-Fi</span>
+                <label class="control" for="wifi">
+                  <input id="wifi" class="control-input visually-hidden" type="checkbox" name="wifi" />
+                  <span class="control-mark"></span>
+                  <span class="control-text">Wi-Fi</span>
                 </label>
               </fieldset>
               <fieldset class="filter-options classification">
                 <legend class="search-filters-legend">Тип жилья:</legend>
-                <label class="classification-label option-label" for="hotel">
-                  <input id="hotel" class="classification-option" type="radio" name="living-option" value="hotel" />
-                  <span class="option-label-text">Гостиница</span>
+                <label class="control" for="hotel">
+                  <input id="hotel" class="control-input visually-hidden" type="radio" name="living-option"
+                    value="hotel" />
+                  <span class="control-mark"></span>
+                  <span class="control-text">Гостиница</span>
                 </label>
-                <label class="classification-label option-label" for="motel">
-                  <input id="motel" class="classification-option" type="radio" name="living-option" value="motel" />
-                  <span class="option-label-text">Мотель</span>
+                <label class="control" for="motel">
+                  <input id="motel" class="control-input visually-hidden" type="radio" name="living-option"
+                    value="motel" />
+                  <span class="control-mark"></span>
+                  <span class="control-text">Мотель</span>
                 </label>
-                <label class="classification-label option-label" for="apartments">
-                  <input id="apartments" class="classification-option" type="radio" name="living-option"
+                <label class="control" for="apartments">
+                  <input id="apartments" class="control-input visually-hidden" type="radio" name="living-option"
                     value="apartments" />
-                  <span class="option-label-text">Апартаменты</span>
+                  <span class="control-mark"></span>
+                  <span class="control-text">Апартаменты</span>
                 </label>
               </fieldset>
               <div class="filter-grid">
                 <label class="search-filters-price" for="price-min">Стоимость, ₽:</label>
-                <input class="price-min" type="number" name="price-min" id="price-min" placeholder="0">
-                <input class="price-max" type="number" name="price-max" placeholder="9000">
+                <div class="range">
+                  <div class="range-wrapper-inputs">
+                    <input class="price-min number-input" type="number" name="price-min" id="price-min" placeholder="0">
+                    <span class="price-help price-from">от</span>
+                    <input class="price-max number-input" type="number" name="price-max" placeholder="9000">
+                    <span class="price-help price-to">до</span>
+                  </div>
+                  <div class="range-scale">
+                    <button class="range-scale-pin range-scale-pin-left">
+                      <span class="visually-hidden">Изменить минимальную цену</span>
+                    </button>
+                    <button class="range-scale-pin range-scale-pin-right">
+                      <span class="visually-hidden">Изменить максимальную цену</span>
+                    </button>
+                  </div>
+                </div>
                 <button class="btn btn-apply" type="submit">Применить</button>
                 <button class="btn-reset" type="reset">Сбросить</button>
               </div>
@@ -124,7 +146,7 @@
           <h2 class="search-result-head">Найдено гостиниц: 38</h2>
           <form method="POST" action="https://echo.htmlacademy.ru/">
             <label for="sort-order" class="visually-hidden">Сортировка</label>
-            <select class="sort-by" id="sort-order" name="sort-order">
+            <select class="sort-by with-dropdown" id="sort-order" name="sort-order">
               <option value="by-price-asc" selected>Сначала дешевые</option>
               <option value="by-price-desc">Сначала дорогие</option>
             </select>
@@ -258,7 +280,7 @@
             <div class="total-items">
               <form class="total-items-form" method="POST" action="https://echo.htmlacademy.ru/">
                 <label class="total-items-label" for="itemsPerPage">Гостиниц на странице:</label>
-                <select class="total-items-select" id="itemsPerPage" name="itemsPerPage">
+                <select class="total-items-select with-dropdown" id="itemsPerPage" name="itemsPerPage">
                   <option value="1">1</option>
                   <option value="2">2</option>
                   <option value="3">3</option>
