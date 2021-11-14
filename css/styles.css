@@ -1091,6 +1091,11 @@ button {
 }
 
 .view-mode-button:active {
+  background-color: var(--basic-gray);
+  opacity: 0.3;
+}
+
+.view-mode-button-active {
   border-color: var(--basic-black);
 }
 
