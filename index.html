@@ -228,6 +228,75 @@
       </div>
     </footer>
   </div>
+  <div class="modal-container modal-hide">
+    <div class="modal modal-search">
+      <div class="modal-header">
+        <h3 class="modal-header-title">Поиск гостиницы в Седоне</h3>
+        <button class="modal-header-close" type="button">
+          <svg class="icon-close" width="13" height="13" viewBox="0 0 13 13" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path d="M13 1.2L11.8 0L6.5 5.3L1.2 0L0 1.2L5.3 6.5L0 11.8L1.2 13L6.5 7.7L11.8 13L13 11.8L7.7 6.5L13 1.2Z"
+              fill="black" />
+          </svg>
+          <span class="visually-hidden">Закрыть поиск</span>
+        </button>
+      </div>
+      <form class="modal-search-form" method="POST" action="https://echo.htmlacademy.ru/">
+        <div class="search-parameter-date">
+          <label class="search-label search-label-date" for="checkin-date">Дата заезда:</label>
+          <input class="date-input" type="text" id="checkin-date" placeholder="Укажите дату" value="27 апреля 2020">
+          <span class="notification error">Мы не можем отправить вас в прошлое.</span>
+        </div>
+        <div class="search-parameter-date">
+          <label class="search-label search-label-date" for="checkout-date">Дата выезда:</label>
+          <input class="date-input" type="text" id="checkout-date" placeholder="Укажите дату" value="1 сентября 2021">
+          <span class="notification">На эти даты есть свободные номера. Пока есть.</span>
+        </div>
+        <div class="passengers-container">
+          <div class="search-parameter-passengers adult">
+            <label class="search-label" for="passengers-adult">Взрослые:</label>
+            <div class="passengers-num-wrapper">
+              <button type="button" class="btn passengers-decrement">
+                <span class="passengers-decrement-icon"></span>
+                <span class="visually-hidden">Минус один</span>
+              </button>
+              <input class="passengers-num" id="passengers-adult" type="text" placeholder="0" value="2">
+              <button type="button" class="btn passengers-increment">
+                <span class="passengers-increment-icon"></span>
+                <span class="visually-hidden">Плюс один</span>
+              </button>
+            </div>
+          </div>
+          <div class="search-parameter-passengers children">
+            <div class="label-with-help">
+              <label class="search-label" for="passengers-children">Дети:</label>
+              <span class="help-toggle">i</span>
+              <div class="help-triangle"></div>
+              <div class="control-help">
+                Укажите количество детей,<br>
+                которые будут с вами, возраст<br>
+                которых от 6 до 18 лет. Дети<br>
+                до 6 лет размещаются<br>
+                бесплатно.
+              </div>
+            </div>
+            <div class="passengers-num-wrapper">
+              <button type="button" class="btn passengers-decrement">
+                <span class="passengers-decrement-icon"></span>
+                <span class="visually-hidden">Минус один</span>
+              </button>
+              <input class="passengers-num" id="passengers-children" type="text" placeholder="0" value="1">
+              <button type="button" class="btn passengers-increment">
+                <span class="passengers-increment-icon"></span>
+                <span class="visually-hidden">Плюс один</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <button class="btn btn-modal-search btn-interactive-light" type="submit">Найти</button>
+      </form>
+    </div>
+  </div>
 </body>
 
 </html>

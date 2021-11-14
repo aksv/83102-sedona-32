@@ -32,6 +32,7 @@
   --active-white: rgba(255, 255, 255, 0.3);
   --hover-white: rgba(255, 255, 255, 0.6);
   --status-error: #ff5757;
+  --overlay: rgba(242, 242, 242, 0.8);
 }
 
 .visually-hidden {
@@ -1510,4 +1511,319 @@ button {
 
 .catalog-subscription .subscription-text {
   color: var(--basic-dark);
+}
+
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: var(--overlay);
+}
+
+.modal-hide {
+  display: none;
+}
+
+.modal {
+  position: relative;
+  margin: auto;
+  padding: 70px;
+  background-color: var(--basic-white);
+  border-radius: 30px;
+}
+
+.modal-search {
+  width: 715px;
+  box-sizing: border-box;
+}
+
+.modal-header {
+  margin-bottom: 54px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-header-title {
+  margin: 0;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 40px;
+  text-transform: uppercase;
+}
+
+.modal-header-close {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 53px;
+  height: 53px;
+  border-radius: 50%;
+  background-color: var(--basic-light);
+  cursor: pointer;
+}
+
+.icon-close {
+  width: 13px;
+  height: 13px;
+}
+
+.modal-header-close:hover {
+  background-color: var(--basic-gray);
+}
+
+.modal-header-close:focus-visible {
+  background-color: var(--basic-gray);
+  outline: 3px solid var(--special-cold-light);
+  outline-offset: -3px;
+}
+
+.modal-header-close:active {
+  background-color: var(--basic-gray);
+}
+
+.modal-header-close:active .icon-close {
+  opacity: 0.3;
+}
+
+
+.modal-search-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.search-label {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 40px;
+}
+
+.label-with-help {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.help-toggle {
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 23px;
+  background-color: var(--special-cold-light);
+  color: var(--basic-white);
+  border-radius: 50%;
+}
+
+.help-toggle:hover ~ .help-triangle {
+  display: block;
+}
+
+.help-toggle:hover ~ .control-help {
+  display: block;
+}
+
+.help-triangle {
+  position: absolute;
+  top: 42px;
+  right: 3px;
+  display: none;
+  width: 19px;
+  height: 9px;
+  background-image: url('../img/svg/triangle-help.svg');
+  background-repeat: no-repeat;
+  background-size: 19px 9px;
+  background-position: center;
+}
+
+.control-help {
+  box-sizing: border-box;
+  position: absolute;
+  top: 51px;
+  right: -112px;
+  display: none;
+  width: 256px;
+  height: 143px;
+  background-color: var(--basic-dark);
+  color: var(--basic-white);
+  padding: 15px 18px 18px 22px;
+  border-radius: 10px;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.search-parameter-date {
+  width: 575px;
+  display: grid;
+  grid-template-columns: 155px 1fr;
+  grid-template-rows: 50px min-content;
+  margin-bottom: 11px;
+}
+
+.search-label-date {
+  grid-column: 1;
+  grid-row: 1;
+  align-self: center;
+}
+
+.date-input {
+  grid-column: 2;
+  grid-row: 1;
+  padding-left: 19px;
+  padding-right: 17px;
+  font-family: "PT Sans", Verdana, sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 40px;
+  border: none;
+  border-radius: 4px;
+  background-color: var(--basic-light);
+  background-image: url('../img/svg/date.svg');
+  background-repeat: no-repeat;
+  background-size: 15px 15px;
+  background-position: 390px 50%;
+  opacity: 0.6;
+}
+
+.date-input:hover {
+  background-color: var(--basic-gray);
+}
+
+.date-input:focus-visible {
+  background-color: var(--basic-gray);
+  outline: 3px solid var(--special-cold-light);
+  outline-offset: -3px;
+}
+
+.date-input:active {
+  background-color: var(--basic-white);
+  outline: 3px solid var(--basic-black);
+  outline-offset: -3px;
+  color: var(--basic-black);
+  opacity: 1;
+}
+
+.notification {
+  grid-column: 2;
+  grid-row: 2;
+  font-size: 16px;
+  line-height: 40px;
+  color: var(--basic-dark);
+}
+
+.error {
+  color: var(--status-error);
+}
+
+.passengers-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.search-parameter-passengers {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+}
+
+.adult {
+  width: 288px;
+}
+
+.children {
+  width: 230px;
+}
+
+.passengers-num-wrapper {
+  display: flex;
+  margin-left: auto;
+  height: 50px;
+}
+
+.passengers-decrement, .passengers-increment {
+  display: block;
+  width: 50px;
+  height: 50px;
+  margin: 0;
+  padding: 0;
+  background-color: var(--basic-light);
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.passengers-decrement:hover > .passengers-decrement-icon,
+.passengers-increment:hover > .passengers-increment-icon {
+  opacity: 1;
+}
+
+.passengers-decrement:focus-visible,
+.passengers-increment:focus-visible {
+  outline: 3px solid var(--special-cold-light);
+  outline-offset: -3px;
+}
+
+.passengers-decrement:focus-visible > .passengers-decrement-icon,
+.passengers-increment:focus-visible > .passengers-increment-icon{
+  opacity: 1;
+}
+
+.passengers-decrement:active,
+.passengers-increment:active {
+  outline: none;
+}
+
+.passengers-decrement:active > .passengers-decrement-icon,
+.passengers-increment:active > .passengers-increment-icon{
+  opacity: 0.2;
+  outline: none;
+}
+
+.passengers-decrement-icon, .passengers-increment-icon {
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.3;
+}
+
+.passengers-decrement-icon {
+  background-image: url('../img/svg/minus.svg');
+  background-size: 13px 1px;
+}
+
+.passengers-increment-icon {
+  background-image: url('../img/svg/plus.svg');
+  background-size: 13px 13px;
+}
+
+.passengers-num {
+  width: 33px;
+  height: 50px;
+  margin: 0;
+  padding: 0;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 40px;
+  font-family: "PT Sans", Verdana, sans-serif;
+  text-align: center;
+  border: none;
+  outline: none;
+  background-color: var(--basic-light);
+}
+
+.btn-modal-search {
+  width: 575px;
+  height: 60px;
+  margin: 0 auto;
+  font-size: 20px;
+  line-height: 40px;
+  background-color: var(--special-cold-light);
+  border-radius: 10px;
 }
