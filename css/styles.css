@@ -542,11 +542,10 @@ button {
 }
 
 .contacts {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr max-content 1fr;
   align-items: center;
-  margin-left: 57px;
-  padding-top: 40px;
-  padding-bottom: 30px;
+  padding: 40px 72px 30px 72px;
 }
 
 .social-links {
@@ -582,13 +581,7 @@ button {
   opacity: 0.3;
 }
 
-.phone-link-container {
-  margin-left: auto;
-}
-
 .phone-link {
-  display: block;
-  width: 358px;
   margin: 0 auto;
   padding: 13px;
   font-size: 40px;
@@ -614,17 +607,10 @@ button {
   opacity: 0.3;
 }
 
-.htmlacademy-link-container {
-  width: 252px;
-  margin-left: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .htmlacademy-link {
   width: 115px;
   height: 33px;
+  justify-self: end;
   padding: 18px 22px 18px 22px;
   background-repeat: no-repeat;
   background-position: center;
