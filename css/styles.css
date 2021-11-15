@@ -1649,25 +1649,8 @@ button {
   border-radius: 50%;
 }
 
-.help-toggle:hover ~ .help-triangle {
-  display: block;
-}
-
 .help-toggle:hover ~ .control-help {
   display: block;
-}
-
-.help-triangle {
-  position: absolute;
-  top: 42px;
-  right: 3px;
-  display: none;
-  width: 19px;
-  height: 9px;
-  background-image: url('../img/svg/triangle-help.svg');
-  background-repeat: no-repeat;
-  background-size: 19px 9px;
-  background-position: center;
 }
 
 .control-help {
@@ -1684,6 +1667,19 @@ button {
   border-radius: 10px;
   font-size: 16px;
   line-height: 20px;
+}
+
+.control-help::after {
+  position: absolute;
+  top: -9px;
+  right: 115px;
+  width: 19px;
+  height: 9px;
+  background-image: url('../img/svg/triangle-help.svg');
+  background-repeat: no-repeat;
+  background-size: 19px 9px;
+  background-position: center;
+  content: "";
 }
 
 .search-parameter-date {
