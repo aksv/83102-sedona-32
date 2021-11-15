@@ -55,7 +55,7 @@
           </a>
         </li>
         <li class="action-item">
-          <button class="btn btn-favorites btn-interactive-dark" type="button">Хочу сюда!</button>
+          <button class="btn btn-favorites btn-interactive-dark btn-focus-outer" type="button">Хочу сюда!</button>
         </li>
       </ul>
     </header>
@@ -82,17 +82,17 @@
                 <legend class="search-filters-legend">Инфраструктура:</legend>
                 <label class="control" for="pool">
                   <input id="pool" class="control-input visually-hidden" type="checkbox" name="pool" />
-                  <span class="control-mark"></span>
+                  <span class="control-mark control-mark-checkbox"></span>
                   <span class="control-text">Бассейн</span>
                 </label>
                 <label class="control" for="parking">
                   <input id="parking" class="control-input visually-hidden" type="checkbox" name="parking" />
-                  <span class="control-mark"></span>
+                  <span class="control-mark control-mark-checkbox"></span>
                   <span class="control-text">Парковка</span>
                 </label>
                 <label class="control" for="wifi">
                   <input id="wifi" class="control-input visually-hidden" type="checkbox" name="wifi" />
-                  <span class="control-mark"></span>
+                  <span class="control-mark control-mark-checkbox"></span>
                   <span class="control-text">Wi-Fi</span>
                 </label>
               </fieldset>
@@ -122,15 +122,16 @@
                 <div class="range">
                   <div class="range-wrapper-inputs">
                     <input class="price-min number-input" type="number" name="price-min" id="price-min" placeholder="0">
-                    <span class="price-help price-from">от</span>
-                    <input class="price-max number-input" type="number" name="price-max" placeholder="9000">
-                    <span class="price-help price-to">до</span>
+                    <label for="price-min" class="price-help price-from">от</label>
+                    <input class="price-max number-input" type="number" name="price-max" id="price-max"
+                      placeholder="9000">
+                    <label for="price-max" class="price-help price-to">до</label>
                   </div>
                   <div class="range-scale">
-                    <button class="range-scale-pin range-scale-pin-left">
+                    <button type="button" class="range-scale-pin range-scale-pin-left">
                       <span class="visually-hidden">Изменить минимальную цену</span>
                     </button>
-                    <button class="range-scale-pin range-scale-pin-right">
+                    <button type="button" class="range-scale-pin range-scale-pin-right">
                       <span class="visually-hidden">Изменить максимальную цену</span>
                     </button>
                   </div>
@@ -184,7 +185,8 @@
                 <span class="catalog-item-type">Гостиница</span>
                 <span class="catalog-item-price">От 4000 ₽</span>
                 <a class="btn catalog-item-details btn-interactive-dark" href="#">Подробнее</a>
-                <button class="btn catalog-item-save btn-interactive-light" type="button">В избранное</button>
+                <button class="btn catalog-item-save btn-interactive-light in-favorites" type="button">В
+                  избранное</button>
               </div>
               <div class="score-container">
                 <div class="catalog-item-stars stars-4">

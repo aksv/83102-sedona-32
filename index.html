@@ -10,7 +10,7 @@
 
 <body>
   <div class="main-container">
-    <header class="page-header content-container">
+    <header class="page-header">
       <nav class="navigation">
         <ul class="navigation-list">
           <li class="navigation-item">
@@ -228,7 +228,7 @@
       </div>
     </footer>
   </div>
-  <div class="modal-container modal-hide">
+  <div class="modal-container modal-hidez">
     <div class="modal modal-search">
       <div class="modal-header">
         <h3 class="modal-header-title">Поиск гостиницы в Седоне</h3>
@@ -245,24 +245,22 @@
         <div class="search-parameter-date">
           <label class="search-label search-label-date" for="checkin-date">Дата заезда:</label>
           <input class="date-input" type="text" id="checkin-date" placeholder="Укажите дату" value="27 апреля 2020">
-          <span class="notification error">Мы не можем отправить вас в прошлое.</span>
+          <p class="notification error">Мы не можем отправить вас в прошлое.</p>
         </div>
         <div class="search-parameter-date">
           <label class="search-label search-label-date" for="checkout-date">Дата выезда:</label>
           <input class="date-input" type="text" id="checkout-date" placeholder="Укажите дату" value="1 сентября 2021">
-          <span class="notification">На эти даты есть свободные номера. Пока есть.</span>
+          <p class="notification">На эти даты есть свободные номера. Пока есть.</p>
         </div>
         <div class="passengers-container">
           <div class="search-parameter-passengers adult">
             <label class="search-label" for="passengers-adult">Взрослые:</label>
             <div class="passengers-num-wrapper">
               <button type="button" class="btn passengers-decrement">
-                <span class="passengers-decrement-icon"></span>
                 <span class="visually-hidden">Минус один</span>
               </button>
               <input class="passengers-num" id="passengers-adult" type="text" placeholder="0" value="2">
               <button type="button" class="btn passengers-increment">
-                <span class="passengers-increment-icon"></span>
                 <span class="visually-hidden">Плюс один</span>
               </button>
             </div>
@@ -282,12 +280,10 @@
             </div>
             <div class="passengers-num-wrapper">
               <button type="button" class="btn passengers-decrement">
-                <span class="passengers-decrement-icon"></span>
                 <span class="visually-hidden">Минус один</span>
               </button>
               <input class="passengers-num" id="passengers-children" type="text" placeholder="0" value="1">
               <button type="button" class="btn passengers-increment">
-                <span class="passengers-increment-icon"></span>
                 <span class="visually-hidden">Плюс один</span>
               </button>
             </div>

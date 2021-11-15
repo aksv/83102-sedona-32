@@ -101,7 +101,7 @@ button {
 
 .btn-interactive-dark:focus-visible {
   outline: 3px solid var(--special-cold-light);
-  outline-offset: -3px;
+  outline-offset: 0;
   background-color: var(--special-warm-dark);
 }
 
@@ -118,7 +118,7 @@ button {
 
 .btn-interactive-light:focus-visible {
   outline: 3px solid var(--special-warm-light);
-  outline-offset: -3px;
+  outline-offset: 0;
 }
 
 .btn-interactive-light:active {
@@ -900,15 +900,20 @@ button {
 .control:not(:last-child) {
   margin-bottom: 14px;
 }
-.control:hover .control-mark {
+.control:hover .control-mark-checkbox {
   opacity: 0.6;
 }
 
-.control-input:focus-visible + .control-mark {
+.control-input[type="checkbox"]:focus-visible + .control-mark {
   outline: 3px solid var(--special-cold-light);
   opacity: 0.6;
 }
-.control:active .control-mark {
+
+.control-input[type="radio"]:focus-visible + .control-mark {
+  outline: 3px solid var(--special-cold-light);
+}
+
+.control:active .control-mark-checkbox {
   opacity: 0.3;
 }
 .control-mark {
@@ -1072,15 +1077,18 @@ button {
 
 .number-input:hover {
   border-color: var(--hover-white);
+  box-shadow: none;
 }
 
 .number-input:focus-visible {
-  outline: 3px solid var(--special-cold-light);
-  outline-offset: -3px;
+  border-color: var(--basic-white);
+  box-shadow: inset 0px 0px 0px 3px var(--special-cold-light),
+    1px 1px 1px 3px var(--special-cold-light);
 }
 
 .number-input:active {
-  background-color: var(--basic-white);
+  background-color: var(--special-warm-light);
+  box-shadow: none;
 }
 
 .price-min {
@@ -1090,7 +1098,7 @@ button {
 
 .price-max {
   margin-right: 81px;
-  border-left: none;
+  margin-left: -1px;
   border-radius: 0 4px 4px 0;
   outline: none;
 }
@@ -1225,6 +1233,7 @@ button {
   background-position: center;
   background-size: 16px 14px;
   outline: none;
+  cursor: pointer;
 }
 
 .view-mode-button:hover, .view-mode-button:focus-visible {
@@ -1372,6 +1381,16 @@ button {
   text-decoration: none;
 }
 
+.catalog-item-save.btn-interactive-light:hover {
+  outline: 1px solid var(--special-warm-light);
+  outline-offset: 0;
+}
+
+.catalog-item-save.btn-interactive-light:active {
+  outline: 1px solid var(--special-warm-light);
+  outline-offset: 0;
+}
+
 .catalog-item-save.in-favorites {
   background-color: var(--special-neutral-light);
 }
@@ -1380,6 +1399,11 @@ button {
 .in-favorites:active,
 .in-favorites:focus-visible {
   background-color: var(--special-neutral-dark);
+}
+
+.catalog-item-save.btn-interactive-light.in-favorites:hover,
+.catalog-item-save.btn-interactive-light.in-favorites:active {
+  outline: none;
 }
 
 .score-container {
@@ -1519,6 +1543,7 @@ button {
 
 .modal-container {
   position: fixed;
+  z-index: 2;
   top: 0;
   left: 0;
   display: flex;
@@ -1534,6 +1559,7 @@ button {
 .modal {
   position: relative;
   margin: auto;
+  z-index: 3;
   padding: 70px;
   background-color: var(--basic-white);
   border-radius: 30px;
@@ -1690,6 +1716,9 @@ button {
   background-repeat: no-repeat;
   background-size: 15px 15px;
   background-position: 390px 50%;
+}
+
+.date-input::placeholder {
   opacity: 0.6;
 }
 
@@ -1714,6 +1743,7 @@ button {
 .notification {
   grid-column: 2;
   grid-row: 2;
+  margin: 0;
   font-size: 16px;
   line-height: 40px;
   color: var(--basic-dark);
@@ -1751,6 +1781,7 @@ button {
 }
 
 .passengers-decrement, .passengers-increment {
+  position: relative;
   display: block;
   width: 50px;
   height: 50px;
@@ -1761,8 +1792,8 @@ button {
   border-radius: 4px;
 }
 
-.passengers-decrement:hover > .passengers-decrement-icon,
-.passengers-increment:hover > .passengers-increment-icon {
+.passengers-decrement:hover::after,
+.passengers-increment:hover::after {
   opacity: 1;
 }
 
@@ -1772,8 +1803,8 @@ button {
   outline-offset: -3px;
 }
 
-.passengers-decrement:focus-visible > .passengers-decrement-icon,
-.passengers-increment:focus-visible > .passengers-increment-icon{
+.passengers-decrement:focus-visible::after,
+.passengers-increment:focus-visible::after {
   opacity: 1;
 }
 
@@ -1782,27 +1813,31 @@ button {
   outline: none;
 }
 
-.passengers-decrement:active > .passengers-decrement-icon,
-.passengers-increment:active > .passengers-increment-icon{
+.passengers-decrement:active::after,
+.passengers-increment:active::after {
   opacity: 0.2;
   outline: none;
 }
 
-.passengers-decrement-icon, .passengers-increment-icon {
-  display: block;
+.passengers-decrement::after,
+.passengers-increment::after {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 50px;
   height: 50px;
   background-position: center;
   background-repeat: no-repeat;
+  content: "";
   opacity: 0.3;
 }
 
-.passengers-decrement-icon {
+.passengers-decrement::after {
   background-image: url('../img/svg/minus.svg');
   background-size: 13px 1px;
 }
 
-.passengers-increment-icon {
+.passengers-increment::after {
   background-image: url('../img/svg/plus.svg');
   background-size: 13px 13px;
 }
