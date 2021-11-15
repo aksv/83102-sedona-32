@@ -498,7 +498,6 @@ button {
 }
 
 .advantage-item-header {
-  width: 171px;
   margin: 0;
   margin-bottom: 29px;
   font-size: 24px;
@@ -796,7 +795,6 @@ button {
 
 .catalog-search-header {
   margin: 0;
-  margin-bottom: 8px;
   font-size: 60px;
   font-weight: 700;
   line-height: 78px;
@@ -809,29 +807,27 @@ button {
 .breadcrumbs {
   display: flex;
   align-items: center;
+  gap: 12px;
 }
 
 .breadcrumbs-home-link {
   display: block;
-  width: 28px;
-  height: 27px;
+  width: 14px;
+  height: 14px;
   background-image: url('../img/svg/home.svg');
-  background-size: 14px 14px;
+  background-size: 12px 12px;
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 4px;
-  /* outline: none; */
 }
 
 .breadcrumbs-link {
   padding: 3px;
-  /* border: 3px solid transparent; */
   border-radius: 4px;
   font-size: 16px;
-  line-height: 21px;
+  line-height: 20px;
   text-decoration: none;
   color: var(--basic-white);
-  /* outline: none; */
 }
 
 .breadcrumbs-home-link:hover, .breadcrumbs-link:hover {
@@ -856,8 +852,8 @@ button {
 
 .breadcrumbs-item:not(:last-child)::before {
   position: absolute;
-  top: 11px;
-  right: -8px;
+  top: 23%;
+  right: -15px;
   width: 5px;
   height: 8px;
   content: "";
@@ -888,7 +884,7 @@ button {
 }
 
 .infrastructure-options {
-  margin-right: 67px;
+  margin-right: 64px;
 }
 
 .search-filters-legend, .search-filters-price {
@@ -902,7 +898,7 @@ button {
   gap: 19px;
 }
 .control:not(:last-child) {
-  margin-bottom: 16px;
+  margin-bottom: 14px;
 }
 .control:hover .control-mark {
   opacity: 0.6;
@@ -979,7 +975,7 @@ button {
 .search-filters-price {
   grid-column: 1 / -1;
   grid-row: 1;
-  margin-bottom: 31px;
+  margin-bottom: 35px;
 }
 
 .range {
@@ -993,7 +989,7 @@ button {
 .range-wrapper-inputs {
   position: relative;
   display: flex;
-  margin-bottom: 32px;
+  margin-bottom: 29px;
 }
 
 .range-scale {
@@ -1018,7 +1014,7 @@ button {
 }
 
 .range-scale-pin-right {
-  right: 51px;
+  right: 54px;
 }
 
 .range-scale-pin:focus-visible {
@@ -1048,13 +1044,14 @@ button {
 
 .price-to {
   top: 25%;
-  right: 5%;
+  right: 7%;
 }
 
 .price-min, .price-max {
-  width: 145px;
+  width: 144px;
   border: 2px solid #FFFFFF;
-  padding: 14px;
+  padding: 10px;
+  padding-left: 16px;
   box-sizing: border-box;
   background: none;
   font: inherit;  
@@ -1067,6 +1064,10 @@ button {
 .number-input::-webkit-inner-spin-button, 
 .number-input::-webkit-outer-spin-button {
   opacity: 0;
+}
+
+.number-input {
+  -moz-appearance:textfield;
 }
 
 .number-input:hover {
@@ -1095,6 +1096,7 @@ button {
 }
 
 .btn-apply, .btn-reset {
+  font-family: "PT Sans", Verdana, sans-serif;
   cursor: pointer;
 }
 
@@ -1128,7 +1130,7 @@ button {
 .btn-reset {
   width: 100px;
   height: 32px;
-  margin: 25px auto;
+  margin: 16px auto;
   grid-column: 2;
   grid-row: 3;
   font-size: 18px;
