@@ -66,15 +66,15 @@ body {
   background-color: var(--body-color);
 }
 
-ul, ol, li {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
 button {
   border: none;
   background-color: var(--basic-white);
+}
+
+.list, .list li {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
 .main-container {
@@ -536,7 +536,7 @@ button {
   display: flex;
 }
 
-.recommendation-item {
+.list .recommendation-item {
   width: 250px;
   padding: 184px 75px 89px 75px;
   background: no-repeat 163px 89px;
@@ -1480,11 +1480,11 @@ button {
   display: flex;
 }
 
-.pagination-item {
+.list .pagination-item {
   margin-right: 8px;
 }
 
-.pagination-item:last-child {
+.list .pagination-item:last-child {
   margin: 0;
 }
 
