@@ -85,6 +85,7 @@ button {
 
 .btn {
   font-weight: 700;
+  font-family: "PT Sans", Verdana, sans-serif;
   text-align: center;
   text-transform: uppercase;
   color: var(--basic-white);
@@ -611,8 +612,8 @@ button {
 }
 
 .subscription {
-  min-height: 224px;
-  padding-top: 91px;
+  min-height: 245px;
+  padding-top: 94px;
   padding-bottom: 75px;
   display: flex;
   flex-direction: column;
@@ -656,6 +657,7 @@ button {
   font-size: 18px;
   font-weight: 400;
   line-height: 26px;
+  font-family: "PT Sans", Verdana, sans-serif;
   background-color: var(--basic-light);
   border: 2px solid var(--basic-light);
   border-radius: 10px 0px 0px 10px;
@@ -698,7 +700,7 @@ button {
   display: grid;
   grid-template-columns: 1fr max-content 1fr;
   align-items: center;
-  padding: 40px 72px 30px 72px;
+  padding: 16px 47px 30px 57px;
 }
 
 .social-links {
