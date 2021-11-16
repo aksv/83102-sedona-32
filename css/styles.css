@@ -1277,7 +1277,7 @@ button {
 .catalog-item {
   display: flex;
   padding-top: 28px;
-  padding-bottom: 31px;
+  padding-bottom: 32px;
 }
 
 .catalog-item-image {
@@ -1418,9 +1418,10 @@ button {
 }
 
 .catalog-item-stars {
-  height: 17px;
+  height: 23px;
   background-image: url('../img/svg/star.svg');
   background-repeat: space;
+  background-position: bottom;
 }
 
 .stars-1 {
@@ -1507,6 +1508,7 @@ button {
 }
 
 .total-items-form {
+  width: 386px;
   display: flex;
   align-items: center;
 }
@@ -1523,17 +1525,19 @@ button {
 
 .total-items-select {
   display: block;
-  width: 122px;
+  width: 160px;
   height: 48px;
-  padding: 12px 20px 12px 17px;
+  padding: 12px 20px 12px 16px;
   padding-top: 12px;
   padding-bottom: 12px;
   border: 2px solid var(--basic-gray);
+  font-family: "PT Sans", Verdana, sans-serif;
 }
 
 .catalog-subscription {
   background-image: none;
   background-color: var(--basic-white);
+  padding-top: 88px;
   padding-bottom: 117px;
 }
 
