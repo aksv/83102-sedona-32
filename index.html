@@ -14,7 +14,7 @@
       <nav class="navigation">
         <ul class="list navigation-list">
           <li class="navigation-item">
-            <a href="#" class="navigation-item-link navigation-item-link-current">Главная</a>
+            <a class="navigation-item-link navigation-item-link-current" href="#">Главная</a>
           </li>
           <li class="navigation-item">
             <a class="navigation-item-link" href="#">О Седоне</a>
@@ -25,11 +25,11 @@
         </ul>
       </nav>
       <a class="sedona-logo">
-        <img src="./img/svg/sedona-logo.svg" width="138" height="70" alt="City of Sedona" />
+        <img src="./img/svg/sedona-logo.svg" width="138" height="70" alt="City of Sedona." />
       </a>
       <ul class="list actions-list">
         <li class="action-item">
-          <a href="#" class="action-item-link action-item-search">
+          <a class="action-item-link action-item-search" href="#">
             <svg class="action-item-icon" width="18" height="18" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="m18 16.5-3.7-3.7A8 8 0 0 0 8-.1C3.6-.1 0 3.6 0 8a8 8 0 0 0 12.9 6.3l3.7 3.7 1.4-1.5ZM8 14a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6Z" />
@@ -38,8 +38,8 @@
           </a>
         </li>
         <li class="action-item with-popover-disabled">
-          <a href="#" class="action-item-link action-item-save">
-            <span class="favorites-count"><span>12</span></span>
+          <a class="action-item-link action-item-save" href="#">
+            <span class="favorites-count">12</span>
             <svg class="action-item-icon" width="18" height="17" viewBox="0 0 18 17" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M8.9 17a1 1 0 0 1-.8-.4l-7-7.9A5.4 5.4 0 0 1 5.5 0C6.8 0 8 .5 9 1.3a5.5 5.5 0 0 1 9 4.1c0 1.3-.5 2.5-1.3 3.4l-7 7.9c-.2.2-.4.3-.8.3Zm-6-9.5L9 14.4l6.2-7c.5-.5.7-1.2.7-2 0-1.8-1.5-3.3-3.3-3.3-1 0-2 .5-2.7 1.3-.3.3-.6.4-.9.4-.3 0-.6-.2-.8-.4a3.7 3.7 0 0 0-2.7-1.3 3.3 3.3 0 0 0-3.3 3.3c-.1.9.3 1.6.7 2.1-.1 0-.1 0 0 0Z" />
@@ -47,38 +47,36 @@
             <span class="visually-hidden">Добавить в избранное</span>
           </a>
           <aside class="popover popover-favorites">
-            <div class="popover-content">
-              <h2 class="visually-hidden">Избранное</h2>
-              <ul class="list favorites-list">
-                <li class="favorites-list-item">
-                  <a class="hotel-preview" href="#">
-                    <img class="hotel-preview-img" src="./img/hotels/hotel-2-preview.png" width="48"
-                      alt="Desert Quail Inn">
-                    <h3 class="hotel-preview-name">Desert Quail Inn</h3>
-                    <span class="hotel-preview-type">Мотель</span>
-                  </a>
-                  <button class="favorites-delete" type="submit">
-                    <span class="visually-hidden">Удалить из избранного</span>
-                  </button>
-                </li>
-                <li class="favorites-list-item">
-                  <a class="hotel-preview" href="#">
-                    <img class="hotel-preview-img" src="./img/hotels/hotel-3-preview.png" width="48"
-                      alt="Villas at Poco Diablo">
-                    <h3 class="hotel-preview-name">Villas at Poco Diablo</h3>
-                    <span class="hotel-preview-type">Апартаменты</span>
-                  </a>
-                  <button class="favorites-delete" type="submit">
-                    <span class="visually-hidden">Удалить из избранного</span>
-                  </button>
-                </li>
-              </ul>
-              <a href="#" class="favorites-all">Все избранные</a>
-            </div>
+            <h2 class="visually-hidden">Избранное</h2>
+            <ul class="list favorites-list">
+              <li class="favorites-list-item">
+                <a class="hotel-preview" href="#">
+                  <img class="hotel-preview-img" src="./img/hotels/hotel-2-preview.png" width="48"
+                    alt="Desert Quail Inn.">
+                  <h3 class="hotel-preview-name">Desert Quail Inn</h3>
+                  <span class="hotel-preview-type">Мотель</span>
+                </a>
+                <button class="simple-btn favorites-delete" type="submit">
+                  <span class="visually-hidden">Удалить из избранного</span>
+                </button>
+              </li>
+              <li class="favorites-list-item">
+                <a class="hotel-preview" href="#">
+                  <img class="hotel-preview-img" src="./img/hotels/hotel-3-preview.png" width="48"
+                    alt="Villas at Poco Diablo.">
+                  <h3 class="hotel-preview-name">Villas at Poco Diablo</h3>
+                  <span class="hotel-preview-type">Апартаменты</span>
+                </a>
+                <button class="simple-btn favorites-delete" type="submit">
+                  <span class="visually-hidden">Удалить из избранного</span>
+                </button>
+              </li>
+            </ul>
+            <a class="favorites-all" href="#">Все избранные</a>
           </aside>
         </li>
         <li class="action-item">
-          <button class="btn btn-favorites btn-interactive-dark" type="button">Хочу сюда!</button>
+          <button class="simple-btn btn btn-favorites btn-interactive-dark" type="button">Хочу сюда!</button>
         </li>
       </ul>
     </header>
@@ -103,7 +101,7 @@
                 </p>
               </div>
               <img class="advantage-item-image" src="./img/sedona-city.jpg" width="800" height="384"
-                alt="Вид на Седону" />
+                alt="Вид на Седону." />
               <ul class="list recommendations-list">
                 <li class="recommendation-item recommendation-item-hotels">
                   <h4 class="recommendation-item-header">Жильё</h4>
@@ -136,7 +134,7 @@
                 </p>
               </div>
               <img class="advantage-item-image" src="./img/devils-bridge.jpg" width="800" height="384"
-                alt="Мост дьявола" />
+                alt="Мост дьявола." />
             </article>
           </li>
           <li class="advantages-list-item">
@@ -179,7 +177,7 @@
         <p class="search-text">
           Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне
         </p>
-        <button class="btn btn-search btn-interactive-dark" type="button">ПОИСК ГОСТИНИЦЫ В седоне</button>
+        <button class="simple-btn btn btn-search btn-interactive-dark" type="button">ПОИСК ГОСТИНИЦЫ В седоне</button>
       </section>
     </main>
     <footer class="page-footer">
@@ -192,13 +190,13 @@
           <label class="visually-hidden" for="email">E-Mail</label>
           <input class="subscription-input-email" id="email" type="email" name="subcription-emai"
             placeholder="Ваш e-mail" />
-          <button class="btn btn-subscription btn-interactive-light" type="submit">Подписаться</button>
+          <button class="simple-btn btn btn-subscription btn-interactive-light" type="submit">Подписаться</button>
         </form>
       </section>
       <div class="contacts">
         <ul class="list social-links">
           <li>
-            <a class="social-link social-link-twitter" href="#">
+            <a class="social-link social-link-twitter" href="https://twitter.com/htmlacademy_ru">
               <svg class="social-icon" width="18" height="15" viewBox="0 0 18 15" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M11.6.2c1.8-.5 3.2.3 3.8 1.2l2.1-.7c0 .9-.6 1.5-.9 1.8.7.1 1.4-.6 1.4-.6a3 3 0 0 1-1.7 2C16.1 10.7 13 15.1 5.7 15h-.5c-.4 0-4.4-.5-5.2-1.9 2.4.2 4.1-.4 5-1.2-1-.3-2.9-.4-3.2-2.9.4.1.6.2 1.3.1C1.8 8.3.4 7.5.5 5.3c.3.3 1.1.5 1.4.5C1.1 5.6-.2 2.5.9.9a11 11 0 0 0 7.6 3.8C8.7 2.3 9.7.8 11.6.2Z" />
@@ -207,7 +205,7 @@
             </a>
           </li>
           <li>
-            <a href="#" class="social-link social-link-facebook">
+            <a class="social-link social-link-facebook" href="https://www.facebook.com/htmlacademy">
               <svg class="social-icon" width="10" height="18" viewBox="0 0 10 18" xmlns="http://www.w3.org/2000/svg">
                 <path d="M7 0a4 4 0 0 0-4 4v2H0v4h3v8h4v-8h3V6H7V4h3V0H7Z" />
               </svg>
@@ -215,7 +213,7 @@
             </a>
           </li>
           <li>
-            <a href="#" class="social-link social-link-youtube">
+            <a class="social-link social-link-youtube" href="https://www.youtube.com/c/HTMLAcademyRUS">
               <svg class="social-icon" width="20" height="16" viewBox="0 0 20 16" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M17 0H2.9C1.2 0 0 1.5 0 3.2v9.5C0 14.5 1.2 16 2.9 16h14.3c1.5 0 2.9-1.5 2.9-3.2V3.2C19.9 1.5 18.7 0 17 0ZM7 11.8V4.2L13.7 8 7 11.8Z" />
@@ -225,7 +223,7 @@
           </li>
         </ul>
         <a class="phone-link" href="tel:+78128121212">+7 (812) 812-12-12</a>
-        <a href="https://htmlacademy.ru/" class="htmlacademy-link">
+        <a class="htmlacademy-link" href="https://htmlacademy.ru/">
           <span class="visually-hidden">HTML Academy</span>
         </a>
       </div>
@@ -235,7 +233,7 @@
     <div class="modal modal-search">
       <div class="modal-header">
         <h3 class="modal-header-title">Поиск гостиницы в Седоне</h3>
-        <button class="modal-header-close" type="button">
+        <button class="simple-btn modal-header-close" type="button">
           <svg class="icon-close" width="13" height="13" viewBox="0 0 13 13" fill="none"
             xmlns="http://www.w3.org/2000/svg">
             <path d="M13 1.2L11.8 0L6.5 5.3L1.2 0L0 1.2L5.3 6.5L0 11.8L1.2 13L6.5 7.7L11.8 13L13 11.8L7.7 6.5L13 1.2Z"
@@ -247,23 +245,26 @@
       <form class="modal-search-form" method="POST" action="https://echo.htmlacademy.ru/">
         <div class="search-parameter-date">
           <label class="search-label search-label-date" for="checkin-date">Дата заезда:</label>
-          <input class="date-input" type="text" id="checkin-date" placeholder="Укажите дату" value="27 апреля 2020">
+          <input class="date-input" type="text" id="checkin-date" name="checkin-date" placeholder="Укажите дату"
+            value="27 апреля 2020">
           <p class="notification error">Мы не можем отправить вас в прошлое.</p>
         </div>
         <div class="search-parameter-date">
           <label class="search-label search-label-date" for="checkout-date">Дата выезда:</label>
-          <input class="date-input" type="text" id="checkout-date" placeholder="Укажите дату" value="1 сентября 2021">
+          <input class="date-input" type="text" id="checkout-date" name="checkout-date" placeholder="Укажите дату"
+            value="1 сентября 2021">
           <p class="notification">На эти даты есть свободные номера. Пока есть.</p>
         </div>
         <div class="passengers-container">
           <div class="search-parameter-passengers adult">
             <label class="search-label" for="passengers-adult">Взрослые:</label>
             <div class="passengers-num-wrapper">
-              <button type="button" class="btn passengers-decrement">
+              <button class="simple-btn btn passengers-decrement" type="button">
                 <span class="visually-hidden">Минус один</span>
               </button>
-              <input class="passengers-num" id="passengers-adult" type="text" placeholder="0" value="2">
-              <button type="button" class="btn passengers-increment">
+              <input class="passengers-num" id="passengers-adult" name="passengers-adult" type="text" placeholder="0"
+                value="2">
+              <button class="simple-btn btn passengers-increment" type="button">
                 <span class="visually-hidden">Плюс один</span>
               </button>
             </div>
@@ -281,17 +282,18 @@
               </div>
             </div>
             <div class="passengers-num-wrapper">
-              <button type="button" class="btn passengers-decrement">
+              <button class="simple-btn btn passengers-decrement" type="button">
                 <span class="visually-hidden">Минус один</span>
               </button>
-              <input class="passengers-num" id="passengers-children" type="text" placeholder="0" value="1">
-              <button type="button" class="btn passengers-increment">
+              <input class="passengers-num" id="passengers-children" name="passengers-children" type="text"
+                placeholder="0" value="1">
+              <button class="simple-btn btn passengers-increment" type="button">
                 <span class="visually-hidden">Плюс один</span>
               </button>
             </div>
           </div>
         </div>
-        <button class="btn btn-modal-search btn-interactive-light" type="submit">Найти</button>
+        <button class="simple-btn btn btn-modal-search btn-interactive-light" type="submit">Найти</button>
       </form>
     </div>
   </div>
