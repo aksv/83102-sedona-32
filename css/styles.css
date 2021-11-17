@@ -63,6 +63,9 @@ body {
   min-height: 100%;
   margin: 0;
   font-family: "PT Sans", Verdana, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--basic-black);
   background-color: var(--body-color);
 }
 
@@ -818,7 +821,7 @@ img {
 }
 
 .breadcrumbs-navigation {
-  margin-bottom: 45px;
+  margin-bottom: 41px;
 }
 
 .breadcrumbs {
@@ -1311,7 +1314,7 @@ img {
   width: 180px;
   margin-right: 37px;
   outline: 3px solid transparent;
-  outline-offset: -3px;
+  outline-offset: 0;
 }
 
 .catalog-item-image:hover {
@@ -1335,7 +1338,7 @@ img {
   flex-grow: 1;
   display: grid;
   grid-template-columns: 157px 1fr;
-  grid-template-rows: min-content 1fr 34px;
+  grid-template-rows: min-content 1fr 36px;
   grid-template-areas:
     "head head"
     "type price"
