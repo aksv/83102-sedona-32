@@ -527,11 +527,16 @@ img {
 }
 
 .advantage-item-text {
+  width: 220px;
   margin: 0;
   font-size: 18px;
   line-height: 21px;
   text-align: center;
   color: var(--basic-dark);
+}
+
+.advantage-item-text-wide {
+  width: 250px;
 }
 
 .color-contrast {
@@ -576,11 +581,17 @@ img {
 }
 
 .recommendation-item-text {
+  width: 250px;
   margin: 0;
   font-size: 18px;
   line-height: 21px;
   text-align: center;
   color: var(--basic-dark);
+}
+
+.recommendation-motel {
+  width: 180px;
+  margin: 0 auto;
 }
 
 .search {
