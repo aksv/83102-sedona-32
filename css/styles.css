@@ -288,10 +288,6 @@ img {
   position: relative;
 }
 
-.with-popover > .popover {
-  display: block;
-}
-
 .popover {
   position: absolute;
   bottom: -8px;
@@ -1312,6 +1308,7 @@ img {
 
 .catalog-item-image {
   width: 180px;
+  min-width: 180px;
   margin-right: 37px;
   outline: 3px solid transparent;
   outline-offset: 0;
