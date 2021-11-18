@@ -994,11 +994,14 @@ img {
 }
 
 .filter-grid {
+  margin: 0;
+  padding: 0;
   margin-left: auto;
   display: grid;
   grid-template-columns: 287px 160px;
   grid-template-rows: min-content 48px 1fr;
   column-gap: 81px;
+  border: none;
 }
 
 .search-filters-price {
